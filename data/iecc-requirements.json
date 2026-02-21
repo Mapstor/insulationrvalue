@@ -1,0 +1,194 @@
+{
+  "zones": {
+    "1": {
+      "name": "Zone 1 (Very Hot-Humid)",
+      "description": "Southern Florida, Hawaii, Puerto Rico, US Virgin Islands",
+      "requirements": {
+        "ceiling_attic": "R-30",
+        "wood_frame_wall": "R-13",
+        "mass_wall": "R-3/R-4ci",
+        "floor": "R-13",
+        "basement_wall": "NR",
+        "crawlspace_wall": "NR",
+        "slab_edge": "NR"
+      },
+      "energyStarRecommended": {
+        "attic": "R-30 to R-49",
+        "walls": "R-13 to R-15",
+        "floor": "R-13",
+        "notes": "Focus on cooling — radiant barriers beneficial. Air sealing critical for humidity control."
+      },
+      "heatingDegreeDays": { "min": 0, "max": 2000 },
+      "coolingDegreeDays": { "min": 3500, "max": 7000 },
+      "primaryConcern": "cooling",
+      "radiantBarrierBenefit": "high"
+    },
+    "2": {
+      "name": "Zone 2 (Hot-Humid / Hot-Dry)",
+      "description": "Southern Texas, Southern Louisiana, Southern Georgia, Southern Arizona",
+      "requirements": {
+        "ceiling_attic": "R-49",
+        "wood_frame_wall": "R-13",
+        "mass_wall": "R-4/R-6ci",
+        "floor": "R-13",
+        "basement_wall": "NR",
+        "crawlspace_wall": "NR",
+        "slab_edge": "NR"
+      },
+      "energyStarRecommended": {
+        "attic": "R-38 to R-60",
+        "walls": "R-13 to R-15",
+        "floor": "R-13 to R-19",
+        "notes": "Cooling-dominant. Consider radiant barriers. Air sealing important."
+      },
+      "heatingDegreeDays": { "min": 2000, "max": 3000 },
+      "coolingDegreeDays": { "min": 2500, "max": 5000 },
+      "primaryConcern": "cooling",
+      "radiantBarrierBenefit": "high"
+    },
+    "3": {
+      "name": "Zone 3 (Warm-Humid / Warm-Dry / Warm-Marine)",
+      "description": "Northern Texas, Tennessee, North Carolina, Northern Arizona, Coastal California",
+      "requirements": {
+        "ceiling_attic": "R-49",
+        "wood_frame_wall": "R-20 or R-13+5ci",
+        "mass_wall": "R-6/R-8ci",
+        "floor": "R-19",
+        "basement_wall": "R-5ci or R-13",
+        "crawlspace_wall": "R-5ci or R-13",
+        "slab_edge": "NR"
+      },
+      "energyStarRecommended": {
+        "attic": "R-38 to R-60",
+        "walls": "R-13 to R-21",
+        "floor": "R-19 to R-25",
+        "notes": "Mixed heating/cooling. Air sealing provides major benefit."
+      },
+      "heatingDegreeDays": { "min": 3000, "max": 4000 },
+      "coolingDegreeDays": { "min": 1500, "max": 3000 },
+      "primaryConcern": "mixed",
+      "radiantBarrierBenefit": "moderate"
+    },
+    "4": {
+      "name": "Zone 4 (Mixed-Humid / Mixed-Dry / Mixed-Marine)",
+      "description": "Virginia, Kentucky, Southern Missouri, Central Oregon, Maryland",
+      "requirements": {
+        "ceiling_attic": "R-60",
+        "wood_frame_wall": "R-20 or R-13+5ci",
+        "mass_wall": "R-8/R-10ci",
+        "floor": "R-19 (R-30 Marine)",
+        "basement_wall": "R-10ci or R-13",
+        "crawlspace_wall": "R-10ci or R-13",
+        "slab_edge": "R-10, 2ft"
+      },
+      "energyStarRecommended": {
+        "attic": "R-49 to R-60",
+        "walls": "R-13+5ci or R-20",
+        "floor": "R-25 to R-30",
+        "notes": "Heating-dominant but significant cooling loads. Continuous insulation becomes important."
+      },
+      "heatingDegreeDays": { "min": 4000, "max": 5500 },
+      "coolingDegreeDays": { "min": 800, "max": 2000 },
+      "primaryConcern": "heating",
+      "radiantBarrierBenefit": "low"
+    },
+    "5": {
+      "name": "Zone 5 (Cold-Humid / Cold-Dry)",
+      "description": "Pennsylvania, Ohio, Indiana, Iowa, Colorado, Southern New England",
+      "requirements": {
+        "ceiling_attic": "R-60",
+        "wood_frame_wall": "R-20+5ci or R-13+10ci",
+        "mass_wall": "R-13/R-15ci",
+        "floor": "R-30",
+        "basement_wall": "R-15ci or R-19",
+        "crawlspace_wall": "R-15ci or R-19",
+        "slab_edge": "R-10, 2ft"
+      },
+      "energyStarRecommended": {
+        "attic": "R-49 to R-60",
+        "walls": "R-20+5ci",
+        "floor": "R-30",
+        "notes": "Heating-dominant. Continuous insulation critical. Air sealing = highest ROI."
+      },
+      "heatingDegreeDays": { "min": 5500, "max": 7000 },
+      "coolingDegreeDays": { "min": 400, "max": 1200 },
+      "primaryConcern": "heating",
+      "radiantBarrierBenefit": "minimal"
+    },
+    "6": {
+      "name": "Zone 6 (Cold)",
+      "description": "Minnesota, Wisconsin, Michigan, Northern New England, Montana",
+      "requirements": {
+        "ceiling_attic": "R-60",
+        "wood_frame_wall": "R-20+5ci or R-13+10ci",
+        "mass_wall": "R-15/R-19ci",
+        "floor": "R-30",
+        "basement_wall": "R-15ci or R-19",
+        "crawlspace_wall": "R-15ci or R-19",
+        "slab_edge": "R-10, 4ft"
+      },
+      "energyStarRecommended": {
+        "attic": "R-49 to R-60",
+        "walls": "R-20+5ci or higher",
+        "floor": "R-30 to R-38",
+        "notes": "Severe heating loads. Maximum insulation pays back fast. Polyiso loses R-value — use XPS/EPS on exterior."
+      },
+      "heatingDegreeDays": { "min": 7000, "max": 9000 },
+      "coolingDegreeDays": { "min": 200, "max": 700 },
+      "primaryConcern": "heating",
+      "radiantBarrierBenefit": "minimal"
+    },
+    "7": {
+      "name": "Zone 7 (Very Cold)",
+      "description": "Northern Minnesota, Northern Maine, parts of Alaska",
+      "requirements": {
+        "ceiling_attic": "R-60",
+        "wood_frame_wall": "R-20+5ci or R-13+10ci",
+        "mass_wall": "R-19/R-21ci",
+        "floor": "R-38",
+        "basement_wall": "R-15ci or R-19",
+        "crawlspace_wall": "R-15ci or R-19",
+        "slab_edge": "R-10, 4ft"
+      },
+      "energyStarRecommended": {
+        "attic": "R-60",
+        "walls": "R-20+10ci",
+        "floor": "R-38",
+        "notes": "Extreme cold. Insulation investment has fastest payback of any zone."
+      },
+      "heatingDegreeDays": { "min": 9000, "max": 12500 },
+      "coolingDegreeDays": { "min": 0, "max": 400 },
+      "primaryConcern": "heating",
+      "radiantBarrierBenefit": "none"
+    },
+    "8": {
+      "name": "Zone 8 (Subarctic/Arctic)",
+      "description": "Interior Alaska",
+      "requirements": {
+        "ceiling_attic": "R-60",
+        "wood_frame_wall": "R-20+5ci or R-13+10ci",
+        "mass_wall": "R-21/R-25ci",
+        "floor": "R-38",
+        "basement_wall": "R-15ci or R-19",
+        "crawlspace_wall": "R-15ci or R-19",
+        "slab_edge": "R-10, 4ft"
+      },
+      "energyStarRecommended": {
+        "attic": "R-60+",
+        "walls": "R-20+10ci or higher",
+        "floor": "R-38+",
+        "notes": "Extreme arctic conditions. Maximum insulation everywhere. Triple-pane windows."
+      },
+      "heatingDegreeDays": { "min": 12500, "max": 20000 },
+      "coolingDegreeDays": { "min": 0, "max": 100 },
+      "primaryConcern": "heating",
+      "radiantBarrierBenefit": "none"
+    }
+  },
+  "notes": {
+    "ci": "ci = continuous insulation (exterior, no thermal bridging through framing)",
+    "source": "2021 IECC Table R402.1.3 (residential)",
+    "exception": "R-49 over 100% of attic area satisfies R-60 requirement if it extends to eaves",
+    "NR": "NR = Not Required by code (but still recommended for comfort)"
+  }
+}
