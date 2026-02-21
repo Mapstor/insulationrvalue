@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import '@/styles/globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -17,9 +18,11 @@ export const metadata: Metadata = {
   },
   description: 'The most comprehensive insulation R-value resource. R-value charts, calculators, climate zone requirements, and expert guides for every insulation type.',
   metadataBase: new URL('https://insulationrvalues.com'),
-  // Google Search Console verification - replace with your actual code
   verification: {
-    google: 'YOUR_GSC_VERIFICATION_CODE', // Get from GSC > Settings > Ownership verification
+    google: 'google12f8c2f9c03913a3',
+    other: {
+      'msvalidate.01': '57C407E8336C4915E2D28EEA649C8078',
+    },
   },
   openGraph: {
     type: 'website',
@@ -70,6 +73,20 @@ export default function RootLayout({
 
         {/* DNS prefetch for common external resources */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5VGCEYXFNG"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5VGCEYXFNG');
+          `}
+        </Script>
 
         {/* Raptive ad script — inserted after approval */}
         {/* <script async src="//..." /> */}
