@@ -5,9 +5,26 @@ import SchemaMarkup from '@/components/seo/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Terms of Use | InsulationRValues.com',
-  description: 'Terms of use for InsulationRValues.com. Read our terms and conditions governing your use of our website, including content usage, disclaimers, and limitations of liability.',
+  description:
+    'Terms of use for InsulationRValues.com. Read our terms and conditions governing your use of our website, including content usage, disclaimers, and limitations of liability.',
   alternates: {
     canonical: 'https://insulationrvalues.com/terms-of-use',
+  },
+  openGraph: {
+    title: 'Terms of Use | InsulationRValues.com',
+    description:
+      'Terms governing use of InsulationRValues.com: content usage, disclaimers, and limitations of liability.',
+    url: 'https://insulationrvalues.com/terms-of-use',
+    siteName: 'InsulationRValues.com',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'InsulationRValues.com Terms of Use',
+      },
+    ],
   },
 }
 

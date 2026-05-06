@@ -100,16 +100,19 @@ const installationOptions = [
   },
 ]
 
-// R-value targets by climate zone and location
+// R-value targets by climate zone and location.
+// Source of truth: 2021 IECC Table R402.1.3 (also stored canonically in
+// data/iecc-requirements.json). Cavity-only nominal values shown here;
+// continuous insulation (e.g. R-13+5ci) is captured separately in articles.
 const rValueTargets: Record<number, Record<string, number>> = {
   1: { attic: 30, walls: 13, basement: 0, 'crawl-space': 0, garage: 13 },
-  2: { attic: 38, walls: 13, basement: 0, 'crawl-space': 0, garage: 13 },
-  3: { attic: 38, walls: 13, basement: 5, 'crawl-space': 5, garage: 13 },
-  4: { attic: 49, walls: 13, basement: 10, 'crawl-space': 10, garage: 13 },
-  5: { attic: 49, walls: 20, basement: 10, 'crawl-space': 10, garage: 20 },
-  6: { attic: 49, walls: 20, basement: 15, 'crawl-space': 15, garage: 20 },
-  7: { attic: 60, walls: 21, basement: 15, 'crawl-space': 15, garage: 21 },
-  8: { attic: 60, walls: 21, basement: 15, 'crawl-space': 15, garage: 21 },
+  2: { attic: 49, walls: 13, basement: 0, 'crawl-space': 0, garage: 13 },
+  3: { attic: 49, walls: 20, basement: 5, 'crawl-space': 5, garage: 20 },
+  4: { attic: 60, walls: 20, basement: 10, 'crawl-space': 10, garage: 20 },
+  5: { attic: 60, walls: 20, basement: 15, 'crawl-space': 15, garage: 20 },
+  6: { attic: 60, walls: 20, basement: 15, 'crawl-space': 15, garage: 20 },
+  7: { attic: 60, walls: 20, basement: 15, 'crawl-space': 15, garage: 20 },
+  8: { attic: 60, walls: 20, basement: 15, 'crawl-space': 15, garage: 20 },
 }
 
 // Guide links by location

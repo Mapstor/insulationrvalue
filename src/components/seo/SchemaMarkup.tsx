@@ -6,7 +6,10 @@ import {
   generateWebApplicationSchema,
   generateWebPageSchema,
   generateContactPageSchema,
+  generateHowToSchema,
+  generateWebSiteSchema,
   extractFAQItems,
+  extractHowToSteps,
 } from '@/lib/seo'
 
 interface ArticleSchemaData {
@@ -86,6 +89,21 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
         }
       }
 
+      // Add HowTo schema for genuine step-by-step articles (slug starts with how-to-)
+      if (articleData.slug.startsWith('how-to-') && articleData.content) {
+        const steps = extractHowToSteps(articleData.content)
+        if (steps.length > 0) {
+          schemas.push(
+            generateHowToSchema(
+              articleData.title,
+              articleData.description,
+              steps,
+              `/${articleData.slug}`
+            )
+          )
+        }
+      }
+
       // Add breadcrumb schema
       schemas.push(
         generateBreadcrumbSchema([
@@ -98,6 +116,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
 
     case 'organization': {
       schemas.push(generateOrganizationSchema())
+      schemas.push(generateWebSiteSchema())
       break
     }
 

@@ -6,9 +6,26 @@ import { Mail, MessageSquare, AlertCircle, CheckCircle, ExternalLink } from 'luc
 
 export const metadata: Metadata = {
   title: 'Contact Us | InsulationRValues.com',
-  description: 'Get in touch with the InsulationRValues.com team. We welcome editorial corrections, partnership inquiries, and questions about our content.',
+  description:
+    'Get in touch with the InsulationRValues.com team. We welcome editorial corrections, partnership inquiries, and questions about our content.',
   alternates: {
     canonical: 'https://insulationrvalues.com/contact',
+  },
+  openGraph: {
+    title: 'Contact InsulationRValues.com',
+    description:
+      'Reach the InsulationRValues.com team for corrections, partnership inquiries, or questions about content.',
+    url: 'https://insulationrvalues.com/contact',
+    siteName: 'InsulationRValues.com',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Contact InsulationRValues.com',
+      },
+    ],
   },
 }
 

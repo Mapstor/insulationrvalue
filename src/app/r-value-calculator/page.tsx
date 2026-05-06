@@ -2,6 +2,10 @@ import { Metadata } from 'next'
 import RValueCalculator from '@/components/calculators/RValueCalculator'
 import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import Link from 'next/link'
+import { getAllZones } from '@/lib/climate-zones'
+import { stateZones, majorCities } from '@/lib/climate-zone-reference'
+
+const allZones = getAllZones()
 
 export const metadata: Metadata = {
   title: 'R-Value Calculator by ZIP Code | Find IECC Insulation Requirements',
@@ -56,6 +60,187 @@ export default function RValueCalculatorPage() {
         <section className="py-8 sm:py-12">
           <div className="container mx-auto px-4 max-w-5xl">
             <RValueCalculator />
+          </div>
+        </section>
+
+        {/* All 8 Zones Reference (pre-rendered for SEO + AI extraction) */}
+        <section className="py-12 bg-white border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              2021 IECC Requirements for All 8 Climate Zones
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Complete reference table of minimum R-value requirements per the 2021 IECC
+              (Table R402.1.3), broken down by zone and building assembly. Use this if you
+              already know your zone or want to compare requirements across zones.
+            </p>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              {allZones.map((zoneData) => (
+                <div
+                  key={zoneData.zone.zone}
+                  className="border border-surface-200 rounded-lg overflow-hidden bg-white"
+                >
+                  <div className="bg-primary text-white px-4 py-3 flex items-center justify-between">
+                    <h3 className="font-semibold">{zoneData.zone.name}</h3>
+                    <span className="text-xs uppercase tracking-wide px-2 py-0.5 bg-primary-700 rounded capitalize">
+                      {zoneData.zone.primaryConcern}
+                    </span>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-sm text-text-muted mb-4">
+                      {zoneData.zone.description}
+                    </p>
+                    <table className="w-full text-sm border-collapse">
+                      <tbody className="divide-y divide-surface-200">
+                        <tr>
+                          <td className="py-2 text-text-muted">Ceiling/Attic</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.ceiling_attic}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 text-text-muted">Wood Frame Wall</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.wood_frame_wall}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 text-text-muted">Floor</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.floor}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 text-text-muted">Basement Wall</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.basement_wall}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 text-text-muted">Crawl Space Wall</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.crawlspace_wall}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 text-text-muted">Slab Edge</td>
+                          <td className="py-2 text-right font-mono font-medium">
+                            {zoneData.requirements.slab_edge}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                      HDD: {zoneData.zone.heatingDegreeDays.min.toLocaleString()}–
+                      {zoneData.zone.heatingDegreeDays.max.toLocaleString()} &middot; CDD:{' '}
+                      {zoneData.zone.coolingDegreeDays.min.toLocaleString()}–
+                      {zoneData.zone.coolingDegreeDays.max.toLocaleString()}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-xs text-text-muted">
+              &ldquo;ci&rdquo; = continuous insulation (uninterrupted by framing).
+              &ldquo;NR&rdquo; = Not Required by IECC. Source: 2021 IECC Table R402.1.3
+              (residential prescriptive R-values), last verified May 2026. Local codes
+              may differ&mdash;always verify with your building department.
+            </p>
+          </div>
+        </section>
+
+        {/* Find Your Climate Zone by State or City */}
+        <section className="py-12 bg-surface-50 border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Find Your Climate Zone by State or City
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Most US states span just one or two climate zones. Find your state or major
+              city below, or use the calculator above for a precise lookup by ZIP code.
+            </p>
+
+            {/* By State */}
+            <h3 className="text-xl font-semibold text-primary mb-4">
+              Climate Zones by State
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((zoneNum) => (
+                <div
+                  key={zoneNum}
+                  className="bg-white border border-surface-200 rounded-lg p-4"
+                >
+                  <h4 className="font-semibold text-primary mb-2">
+                    Zone {zoneNum}
+                    <span className="ml-2 text-xs font-normal text-text-muted">
+                      {allZones.find((z) => z.zone.zone === zoneNum)?.requirements
+                        .ceiling_attic}{' '}
+                      attic
+                    </span>
+                  </h4>
+                  <ul className="text-sm text-text-muted space-y-1">
+                    {stateZones[zoneNum]?.map((state) => (
+                      <li key={state}>{state}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* By City */}
+            <h3 className="text-xl font-semibold text-primary mb-4">
+              Climate Zones for Major US Cities
+            </h3>
+            <div className="border border-surface-200 rounded-lg overflow-hidden bg-white">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-primary text-white">
+                    <tr>
+                      <th className="px-4 py-2 text-left font-medium">City</th>
+                      <th className="px-4 py-2 text-left font-medium">State</th>
+                      <th className="px-4 py-2 text-center font-medium">Zone</th>
+                      <th className="px-4 py-2 text-left font-medium hidden md:table-cell">
+                        Attic R-Value
+                      </th>
+                      <th className="px-4 py-2 text-left font-medium hidden lg:table-cell">
+                        Wall R-Value
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-surface-200">
+                    {majorCities.map((c, idx) => {
+                      const zoneInfo = allZones.find((z) => z.zone.zone === c.zone)
+                      return (
+                        <tr
+                          key={`${c.city}-${c.state}`}
+                          className={idx % 2 === 0 ? 'bg-white' : 'bg-surface-50'}
+                        >
+                          <td className="px-4 py-2 font-medium">{c.city}</td>
+                          <td className="px-4 py-2 text-text-muted">{c.state}</td>
+                          <td className="px-4 py-2 text-center font-mono font-medium">
+                            {c.zone}
+                          </td>
+                          <td className="px-4 py-2 hidden md:table-cell font-mono text-text-muted">
+                            {zoneInfo?.requirements.ceiling_attic}
+                          </td>
+                          <td className="px-4 py-2 hidden lg:table-cell font-mono text-text-muted">
+                            {zoneInfo?.requirements.wood_frame_wall}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-text-muted">
+              Cities near zone boundaries (e.g., Raleigh NC, Reno NV, Boise ID) may fall
+              into either of two zones depending on exact location and elevation. Use
+              the calculator above to verify by ZIP code. Marine subzones (4C, 3C) apply
+              to coastal Pacific Northwest and northern California; they share R-value
+              requirements with their primary zone but have stricter vapor-control rules.
+            </p>
           </div>
         </section>
 

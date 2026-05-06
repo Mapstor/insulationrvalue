@@ -84,66 +84,130 @@ export default function ThicknessCalculatorPage() {
               </div>
 
               <h3 className="text-xl font-semibold text-primary mt-6 mb-3">
-                R-Value Per Inch by Material
+                Thickness Required by Material and Target R-Value
               </h3>
+              <p className="text-text leading-relaxed mb-4">
+                The full thickness reference below covers every common insulation
+                material against the six most-targeted R-values (R-13 wall, R-19 wall,
+                R-30 floor, R-38 attic, R-49 attic, R-60 attic). Numbers use the
+                midpoint of each material&apos;s R-per-inch range; field installation
+                will vary slightly with density and temperature.
+              </p>
               <div className="overflow-x-auto -mx-4 px-4 my-6">
-                <table className="min-w-full border-collapse">
+                <table className="min-w-full border-collapse text-sm">
                   <thead>
                     <tr className="bg-primary text-white">
                       <th className="text-left py-3 px-4 font-semibold">Material</th>
                       <th className="text-left py-3 px-4 font-semibold">R-per-Inch</th>
-                      <th className="text-left py-3 px-4 font-semibold">Inches for R-38</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-13</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-19</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-30</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-38</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-49</th>
+                      <th className="text-center py-3 px-3 font-semibold">R-60</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-surface-200">
                       <td className="py-3 px-4">Closed-Cell Spray Foam</td>
-                      <td className="py-3 px-4 font-semibold text-accent">R-6.0 to R-7.0</td>
-                      <td className="py-3 px-4">5.4&quot; – 6.3&quot;</td>
+                      <td className="py-3 px-4 font-semibold text-accent">R-6.5</td>
+                      <td className="py-3 px-3 text-center font-mono">2.0&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">2.9&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">4.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">5.8&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">7.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">9.2&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200 bg-surface-50">
                       <td className="py-3 px-4">Polyiso Foam Board</td>
-                      <td className="py-3 px-4 font-semibold text-accent">R-5.6 to R-6.5</td>
-                      <td className="py-3 px-4">5.8&quot; – 6.8&quot;</td>
+                      <td className="py-3 px-4 font-semibold text-accent">R-6.0</td>
+                      <td className="py-3 px-3 text-center font-mono">2.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">3.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">5.0&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">6.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">8.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">10.0&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200">
                       <td className="py-3 px-4">XPS Foam Board</td>
-                      <td className="py-3 px-4 font-semibold text-secondary">R-4.5 to R-5.0</td>
-                      <td className="py-3 px-4">7.6&quot; – 8.4&quot;</td>
+                      <td className="py-3 px-4 font-semibold text-secondary">R-5.0</td>
+                      <td className="py-3 px-3 text-center font-mono">2.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">3.8&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">6.0&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">7.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">9.8&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">12.0&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200 bg-surface-50">
-                      <td className="py-3 px-4">Mineral Wool Batts</td>
-                      <td className="py-3 px-4 font-semibold text-secondary">R-3.8 to R-4.3</td>
-                      <td className="py-3 px-4">8.8&quot; – 10.0&quot;</td>
+                      <td className="py-3 px-4">EPS Foam Board</td>
+                      <td className="py-3 px-4 font-semibold text-secondary">R-4.0</td>
+                      <td className="py-3 px-3 text-center font-mono">3.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">4.8&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">7.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">9.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">12.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">15.0&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200">
-                      <td className="py-3 px-4">EPS Foam Board</td>
-                      <td className="py-3 px-4 font-semibold text-secondary">R-3.6 to R-4.4</td>
-                      <td className="py-3 px-4">8.6&quot; – 10.6&quot;</td>
+                      <td className="py-3 px-4">Mineral Wool Batts</td>
+                      <td className="py-3 px-4 font-semibold text-secondary">R-4.0</td>
+                      <td className="py-3 px-3 text-center font-mono">3.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">4.8&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">7.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">9.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">12.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">15.0&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200 bg-surface-50">
                       <td className="py-3 px-4">Open-Cell Spray Foam</td>
-                      <td className="py-3 px-4 font-semibold">R-3.5 to R-3.8</td>
-                      <td className="py-3 px-4">10.0&quot; – 10.9&quot;</td>
+                      <td className="py-3 px-4 font-semibold">R-3.7</td>
+                      <td className="py-3 px-3 text-center font-mono">3.5&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">5.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">8.1&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">10.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">13.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">16.3&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200">
                       <td className="py-3 px-4">Blown-In Cellulose</td>
-                      <td className="py-3 px-4 font-semibold">R-3.2 to R-3.8</td>
-                      <td className="py-3 px-4">10.0&quot; – 11.9&quot;</td>
+                      <td className="py-3 px-4 font-semibold">R-3.5</td>
+                      <td className="py-3 px-3 text-center font-mono">3.7&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">5.4&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">8.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">10.9&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">14.0&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">17.2&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200 bg-surface-50">
                       <td className="py-3 px-4">Fiberglass Batts</td>
-                      <td className="py-3 px-4 font-semibold">R-3.0 to R-3.7</td>
-                      <td className="py-3 px-4">10.3&quot; – 12.7&quot;</td>
+                      <td className="py-3 px-4 font-semibold">R-3.2</td>
+                      <td className="py-3 px-3 text-center font-mono">4.1&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">5.9&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">9.4&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">11.9&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">15.3&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">18.8&quot;</td>
                     </tr>
                     <tr className="border-b border-surface-200">
                       <td className="py-3 px-4">Blown-In Fiberglass</td>
-                      <td className="py-3 px-4 font-semibold">R-2.2 to R-2.7</td>
-                      <td className="py-3 px-4">14.1&quot; – 17.3&quot;</td>
+                      <td className="py-3 px-4 font-semibold">R-2.5</td>
+                      <td className="py-3 px-3 text-center font-mono">5.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">7.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">12.0&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">15.2&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">19.6&quot;</td>
+                      <td className="py-3 px-3 text-center font-mono">24.0&quot;</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p className="text-xs text-text-muted mb-4">
+                Thickness = target R-value &divide; R-per-inch (rounded to nearest
+                tenth). Cellulose installations should add ~20% extra depth to account
+                for settling. Standard 2&times;4 cavities are 3.5&quot; deep, 2&times;6
+                cavities 5.5&quot;&mdash;use this to spot which materials fit cavity
+                depth without continuous insulation.
+              </p>
 
               <div className="bg-secondary-50 border-l-4 border-secondary p-4 rounded-r-lg my-6">
                 <p className="font-semibold text-secondary-700 mb-2">Why Thickness Varies</p>

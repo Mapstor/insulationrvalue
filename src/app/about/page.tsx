@@ -2,58 +2,32 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
-import { CheckCircle, Users, BookOpen, Shield, Award, Mail } from 'lucide-react'
+import { Shield, Mail, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us | InsulationRValues.com',
-  description: 'Learn about InsulationRValues.com — the most comprehensive, unbiased insulation R-value resource. Meet our team of building science experts and certified professionals.',
+  title: 'About InsulationRValues.com | A Homeowner-Built Insulation Resource',
+  description:
+    'How a homeowner who built a house in IECC Climate Zone 7 turned hundreds of hours of insulation research into one sourced reference. Methodology, sources, and limits.',
   alternates: {
     canonical: 'https://insulationrvalues.com/about',
   },
+  openGraph: {
+    title: 'About InsulationRValues.com',
+    description:
+      'Built by a homeowner who spent hundreds of hours researching insulation for his own North Dakota build. Now a sourced reference for everyone else.',
+    url: 'https://insulationrvalues.com/about',
+    siteName: 'InsulationRValues.com',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'About InsulationRValues.com',
+      },
+    ],
+  },
 }
-
-const teamMembers = [
-  {
-    name: 'Michael Torres',
-    role: 'Editor-in-Chief',
-    credentials: 'BPI Building Analyst, RESNET HERS Rater',
-    bio: 'Michael has spent 15+ years in residential energy efficiency, starting as an insulation installer and working his way up to energy auditor. He has personally inspected over 2,000 homes and seen every insulation mistake in the book — from compressed batts behind wiring to vapor barriers on the wrong side. His mission is to help homeowners avoid costly errors by understanding the science behind R-value.',
-    image: '/images/team/michael-torres.jpg',
-  },
-  {
-    name: 'Sarah Chen',
-    role: 'Technical Reviewer',
-    credentials: 'Licensed General Contractor, Energy Star Partner',
-    bio: 'Sarah runs a weatherization contracting company in the Pacific Northwest. She specializes in crawl space and basement insulation in marine climates, where moisture management is critical. With over 10 years of field experience, she brings practical installation knowledge to every article review — ensuring our guides reflect real-world conditions, not just manufacturer spec sheets.',
-    image: '/images/team/sarah-chen.jpg',
-  },
-  {
-    name: 'David Ramirez',
-    role: 'Content Director',
-    credentials: 'Building Science Researcher',
-    bio: 'David spent 8 years at a building performance research organization before joining InsulationRValues.com. He translates complex building science into practical guidance, drawing on research from ORNL, Building Science Corporation, and DOE programs. He ensures every claim we make is backed by peer-reviewed data or field-verified testing.',
-    image: '/images/team/david-ramirez.jpg',
-  },
-]
-
-const editorialProcess = [
-  {
-    title: 'Research',
-    description: 'Every article starts with data from authoritative sources: DOE energy guidelines, ORNL research publications, IECC building codes, and manufacturer technical specifications.',
-  },
-  {
-    title: 'Field Verification',
-    description: 'Our team includes practicing contractors who verify that recommendations work in real-world conditions — not just laboratory settings.',
-  },
-  {
-    title: 'Technical Review',
-    description: 'Before publication, a certified building analyst or licensed contractor reviews every article for accuracy and practical applicability.',
-  },
-  {
-    title: 'Annual Updates',
-    description: 'We review all content annually and update when building codes change, new products enter the market, or better data becomes available.',
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -68,89 +42,152 @@ export default function AboutPage() {
 
           {/* Mission Statement */}
           <section className="bg-primary-50 border border-primary-200 rounded-lg p-6 mb-8 not-prose">
-            <h2 className="text-xl font-semibold text-primary mb-3">Our Mission</h2>
+            <h2 className="text-xl font-semibold text-primary mb-3">In one sentence</h2>
             <p className="text-text leading-relaxed">
-              InsulationRValues.com is the most comprehensive, unbiased insulation resource on the web.
-              We provide expert guides, interactive calculators, and data-driven recommendations to help
-              homeowners, contractors, and building professionals make informed decisions about insulation.
+              InsulationRValues.com is a sourced, homeowner-built reference for R-values,
+              IECC code requirements, material costs, and the trade-offs between insulation
+              choices &mdash; built so the next homeowner does not have to spend hundreds of
+              hours digging through scattered sources.
             </p>
           </section>
 
-          {/* Why We Exist */}
-          <h2>Why We Built This Resource</h2>
+          {/* Origin story */}
+          <h2>Why this site exists</h2>
           <p>
-            We've pulled soggy fiberglass out of hundreds of crawl spaces. We've seen attics insulated
-            to R-60 with massive air leaks that rendered the insulation nearly useless. We've watched
-            homeowners waste thousands of dollars on the wrong insulation type because they didn't
-            understand climate zone requirements.
+            In 2022, I built my first house in North Dakota. That puts me in IECC Climate
+            Zone 7 &mdash; winters where wind chill can drop below -40&deg;F and a leaky
+            building envelope means a furnace running half the day. With energy costs
+            trending the way they were, I had one question: how do I build this once and
+            not pay for it for the next forty years?
           </p>
           <p>
-            The insulation industry is full of conflicting information — manufacturer marketing,
-            contractor upsells, and outdated advice that doesn't reflect current building science.
-            We created InsulationRValues.com to cut through the noise with clear, practical guidance
-            backed by real data.
+            So I started reading. DOE energy guides. Oak Ridge National Laboratory whole-wall
+            R-value studies. Building Science Corporation papers on rigid foam temperature
+            performance. The 2021 IECC text and the state amendments that go with it.
+            Manufacturer spec sheets. ASHRAE ventilation standards. RESNET installation-grade
+            studies. Hundreds of hours across .gov and .edu PDFs and the corners of the
+            internet where the people who actually install this stuff argue about the
+            details.
+          </p>
+          <p>
+            What frustrated me was that nobody had pulled it together. Most existing
+            insulation sites were contractor blogs trying to sell something, manufacturer
+            pages promoting their own products, or thin AI content that didn&apos;t even
+            have the climate zones right. The information existed &mdash; it was just
+            scattered across thirty different places, and half of those places contradicted
+            each other.
+          </p>
+          <p>
+            This site is the reference I built for myself, organised so you don&apos;t
+            have to repeat the search.
           </p>
 
-          {/* Team Section */}
-          <h2>Meet Our Team</h2>
+          {/* What this site is */}
+          <h2>What this site is</h2>
           <p>
-            Our team combines decades of field experience with formal building science credentials.
-            These aren't writers copying manufacturer brochures — they're practitioners who've installed,
-            inspected, and diagnosed insulation systems in every climate zone.
+            A research-based reference. Every R-value, code requirement, cost range, and
+            recommendation here is sourced from primary documents &mdash; not scraped from
+            other content sites. Numerical claims are cross-checked against at least two
+            independent sources before publishing. Where sources disagree (polyiso&apos;s
+            cold-weather derating is a good example), I say so instead of papering over it.
+          </p>
+          <p>
+            The calculators run on the same data tables I used to size my own envelope:
+            2021 IECC Table R402.1.3 for code minimums, Energy Star retrofit guidance for
+            upgrade scenarios, and manufacturer R-per-inch ranges for thickness
+            calculations.
           </p>
 
-          <div className="not-prose space-y-6 my-8">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="bg-white border border-surface-200 rounded-lg p-6">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="w-20 h-20 bg-surface-200 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-8 h-8 text-surface-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary">{member.name}</h3>
-                    <p className="text-secondary font-medium text-sm">{member.role}</p>
-                    <p className="text-text-muted text-sm mb-3">{member.credentials}</p>
-                    <p className="text-text text-sm leading-relaxed">{member.bio}</p>
-                  </div>
-                </div>
+          {/* What this site is NOT */}
+          <div className="not-prose bg-amber-50 border border-amber-200 rounded-lg p-6 my-8">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-semibold text-amber-900 mb-2">What this site is not</h3>
+                <p className="text-text text-sm leading-relaxed mb-3">
+                  I am not a licensed contractor, building scientist, or engineer. I built
+                  one house and read everything I could find from primary sources before
+                  making decisions. This site is educational reference material &mdash; not
+                  a substitute for professional advice on your specific project.
+                </p>
+                <p className="text-text text-sm leading-relaxed">
+                  For local code compliance, structural questions, or moisture modelling
+                  on a specific assembly, hire a local pro. The{' '}
+                  <a
+                    href="https://icaa.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Insulation Contractors Association of America
+                  </a>{' '}
+                  contractor directory and your utility&apos;s energy-auditor list are good
+                  starting points.
+                </p>
               </div>
-            ))}
+            </div>
           </div>
 
-          {/* Editorial Process */}
-          <h2>Our Editorial Process</h2>
-          <p>
-            We don't publish content to hit a word count. Every article goes through a rigorous
-            process to ensure accuracy, practicality, and usefulness.
-          </p>
-
-          <div className="not-prose grid sm:grid-cols-2 gap-4 my-8">
-            {editorialProcess.map((step, index) => (
-              <div key={step.title} className="bg-surface-50 border border-surface-200 rounded-lg p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">
-                    {index + 1}
-                  </span>
-                  <h3 className="font-semibold text-primary">{step.title}</h3>
-                </div>
-                <p className="text-sm text-text-muted">{step.description}</p>
-              </div>
-            ))}
-          </div>
+          {/* How content is researched */}
+          <h2>How content is researched and updated</h2>
+          <ul>
+            <li>
+              <strong>Primary sources first.</strong> DOE, ORNL, BSC, IECC, ASHRAE,
+              manufacturer spec sheets. I avoid quoting other content sites as authority
+              &mdash; they are usually citing the same primary sources you can read directly.
+            </li>
+            <li>
+              <strong>Cross-checked numbers.</strong> R-values, cost ranges, and code
+              references are verified against at least two independent sources before
+              publishing.
+            </li>
+            <li>
+              <strong>Dated articles.</strong> Each article carries a &ldquo;last
+              updated&rdquo; date so you can tell when the underlying data was last
+              checked. Year-stamps in headlines are only bumped when the article was
+              genuinely re-checked.
+            </li>
+            <li>
+              <strong>Code revisions.</strong> When the IECC adopts a new edition or a
+              state amendment changes requirements, affected pages are updated within 60
+              days.
+            </li>
+            <li>
+              <strong>Reader corrections.</strong> If you spot an error, email{' '}
+              <a href="mailto:info@insulationrvalues.com">info@insulationrvalues.com</a>.
+              Errors that could affect a homeowner&apos;s decision get a published
+              correction note on the affected article.
+            </li>
+          </ul>
 
           {/* Sources */}
-          <h2>Our Sources</h2>
-          <p>
-            We draw on authoritative sources for R-value data, building code requirements, and
-            energy efficiency recommendations:
-          </p>
+          <h2>Sources used on this site</h2>
           <ul>
-            <li><strong>U.S. Department of Energy (DOE)</strong> — Energy efficiency guidelines and insulation recommendations by climate zone</li>
-            <li><strong>Oak Ridge National Laboratory (ORNL)</strong> — Building envelope research and whole-wall R-value data</li>
-            <li><strong>Building Science Corporation (BSC)</strong> — Moisture management and building assembly research</li>
-            <li><strong>International Energy Conservation Code (IECC)</strong> — Minimum R-value requirements by climate zone</li>
-            <li><strong>Energy Star</strong> — Retrofit recommendations and program specifications</li>
-            <li><strong>Manufacturer Technical Data</strong> — Product-specific R-values from Owens Corning, Rockwool, Johns Manville, and others</li>
+            <li>
+              <strong>U.S. Department of Energy (DOE)</strong> &mdash; Energy efficiency
+              guidance and insulation recommendations by climate zone
+            </li>
+            <li>
+              <strong>Oak Ridge National Laboratory (ORNL)</strong> &mdash; Building
+              envelope research and whole-wall R-value data
+            </li>
+            <li>
+              <strong>Building Science Corporation (BSC)</strong> &mdash; Moisture
+              management and building assembly research
+            </li>
+            <li>
+              <strong>International Energy Conservation Code (IECC)</strong> &mdash;
+              Minimum R-value requirements by climate zone (currently 2021 IECC Table
+              R402.1.3)
+            </li>
+            <li>
+              <strong>Energy Star</strong> &mdash; Retrofit guidance and program
+              specifications
+            </li>
+            <li>
+              <strong>Manufacturer technical data</strong> &mdash; Owens Corning, Rockwool,
+              Johns Manville, CertainTeed, Knauf, and others
+            </li>
           </ul>
 
           {/* Independence Statement */}
@@ -158,55 +195,90 @@ export default function AboutPage() {
             <div className="flex items-start gap-3">
               <Shield className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-accent-700 mb-2">Our Independence</h3>
+                <h3 className="font-semibold text-accent-700 mb-2">Independence</h3>
                 <p className="text-text text-sm leading-relaxed">
-                  InsulationRValues.com is <strong>not affiliated with any manufacturer, retailer, or
-                  installation company</strong>. We are not paid to recommend specific brands or products.
-                  Our recommendations are based on building science data, field experience, and cost-effectiveness
-                  — not marketing partnerships.
+                  InsulationRValues.com is{' '}
+                  <strong>
+                    not affiliated with any manufacturer, retailer, or installation company
+                  </strong>
+                  . No brand has paid for placement, and no manufacturer has reviewed or
+                  approved this content. Recommendations are based on building science data
+                  and cost-effectiveness &mdash; not commercial relationships.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Advertising Disclosure */}
-          <h2>How We're Supported</h2>
+          {/* Advertising / Affiliate Disclosure */}
+          <h2>How this site is supported</h2>
           <p>
-            InsulationRValues.com is supported by display advertising (through Raptive) and affiliate
-            links to retailers like Amazon, Home Depot, and Lowe's. When you purchase products through
-            our links, we may earn a commission at no additional cost to you.
+            InsulationRValues.com is supported by display advertising (through Raptive)
+            and affiliate links to retailers like Amazon, Home Depot, and Lowe&apos;s. If
+            you click an affiliate link and buy something, the site earns a small
+            commission at no extra cost to you.
           </p>
           <p>
-            <strong>Important:</strong> Affiliate relationships never influence our recommendations.
-            We recommend products based on building science data and field performance — not commission rates.
-            Many of our top recommendations aren't even available through affiliate programs.
+            <strong>Affiliate relationships do not influence recommendations.</strong> Many
+            of the products I&apos;d recommend (mineral wool batts in specific facings,
+            certain rigid foam thicknesses, regional spray foam contractors) are not in any
+            affiliate program at all. Where two materials would equally fit a given
+            application, the choice is made on cost-per-R-value and installation
+            constraints &mdash; not commission rates.
           </p>
 
           {/* Update Policy */}
-          <h2>Content Updates</h2>
-          <p>
-            Building codes and product specifications change. We review all content annually and update
-            articles when:
-          </p>
+          <h2>When content gets updated</h2>
           <ul>
-            <li>IECC building codes are updated</li>
-            <li>Product specifications change significantly</li>
-            <li>New building science research becomes available</li>
-            <li>Readers report errors or outdated information</li>
+            <li>When the IECC adopts a new edition or a state amendment changes requirements</li>
+            <li>When a manufacturer changes a published R-value or product specification</li>
+            <li>When new building science research changes the recommended approach for an assembly</li>
+            <li>When a reader reports an error that holds up under verification</li>
           </ul>
           <p>
-            Each article displays its last updated date. If you find an error or outdated information,
-            please <Link href="/contact">contact us</Link>.
+            Each article displays its last updated date. If you find an error or outdated
+            information, please <Link href="/contact">get in touch</Link>.
           </p>
+
+          {/* Trust pages */}
+          <div className="not-prose grid sm:grid-cols-3 gap-4 my-8">
+            <Link
+              href="/data-sources"
+              className="block p-4 border border-surface-200 rounded-lg hover:border-primary hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="font-semibold text-primary mb-1">Data Sources</h3>
+              <p className="text-xs text-text-muted">
+                Every primary source cited across the site, organised by type.
+              </p>
+            </Link>
+            <Link
+              href="/corrections"
+              className="block p-4 border border-surface-200 rounded-lg hover:border-primary hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="font-semibold text-primary mb-1">Corrections Log</h3>
+              <p className="text-xs text-text-muted">
+                Public log of every published correction with dates and changes.
+              </p>
+            </Link>
+            <Link
+              href="/insulation-glossary"
+              className="block p-4 border border-surface-200 rounded-lg hover:border-primary hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="font-semibold text-primary mb-1">Glossary</h3>
+              <p className="text-xs text-text-muted">
+                Plain-English definitions of 27 building-science terms.
+              </p>
+            </Link>
+          </div>
 
           {/* Contact */}
           <div className="not-prose bg-surface-100 rounded-lg p-6 mt-8">
             <div className="flex items-center gap-3 mb-3">
               <Mail className="w-5 h-5 text-primary" />
-              <h3 className="font-semibold text-primary">Get in Touch</h3>
+              <h3 className="font-semibold text-primary">Get in touch</h3>
             </div>
             <p className="text-text text-sm mb-4">
-              Have questions, corrections, or partnership inquiries? We'd love to hear from you.
+              Questions, corrections, or partnership inquiries: plain email is the best way
+              through. I aim to respond within two business days.
             </p>
             <a
               href="mailto:info@insulationrvalues.com"

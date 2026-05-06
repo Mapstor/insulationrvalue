@@ -59,6 +59,140 @@ export default function SavingsCalculatorPage() {
           </div>
         </section>
 
+        {/* Worked Payback Scenarios (pre-rendered for SEO) */}
+        <section className="py-12 bg-white border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Real-World Insulation Payback Scenarios
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Six common upgrade scenarios with realistic 2025&ndash;2026 cost,
+              annual savings, and simple payback. Numbers assume 2% annual energy
+              cost inflation and exclude any Inflation Reduction Act tax credits
+              (which would shorten payback by ~30%).
+            </p>
+
+            <div className="overflow-x-auto border border-surface-200 rounded-lg bg-white">
+              <table className="w-full text-sm">
+                <thead className="bg-primary text-white">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-medium">Upgrade</th>
+                    <th className="px-4 py-3 text-left font-medium">Climate</th>
+                    <th className="px-4 py-3 text-right font-medium">Cost</th>
+                    <th className="px-4 py-3 text-right font-medium">Savings/yr</th>
+                    <th className="px-4 py-3 text-right font-medium">Payback</th>
+                    <th className="px-4 py-3 text-right font-medium">20-yr ROI</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-surface-200">
+                  <tr className="bg-white">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Attic R-19 &rarr; R-49</div>
+                      <div className="text-xs text-text-muted">
+                        1,500 sq ft, blown cellulose
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 5 (Chicago)</td>
+                    <td className="px-4 py-3 text-right font-mono">$1,200</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$280</td>
+                    <td className="px-4 py-3 text-right font-mono">~4 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$5,600</td>
+                  </tr>
+                  <tr className="bg-surface-50">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Attic R-30 &rarr; R-60</div>
+                      <div className="text-xs text-text-muted">
+                        2,000 sq ft, blown cellulose
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 6 (Minneapolis)</td>
+                    <td className="px-4 py-3 text-right font-mono">$1,500</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$240</td>
+                    <td className="px-4 py-3 text-right font-mono">~6 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$4,800</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Wall retrofit R-0 &rarr; R-13</div>
+                      <div className="text-xs text-text-muted">
+                        1,500 sq ft, dense-pack cellulose
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 4 (Washington DC)</td>
+                    <td className="px-4 py-3 text-right font-mono">$3,500</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$300</td>
+                    <td className="px-4 py-3 text-right font-mono">~12 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$6,000</td>
+                  </tr>
+                  <tr className="bg-surface-50">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Rim joist seal</div>
+                      <div className="text-xs text-text-muted">
+                        150 ln ft, 2&quot; closed-cell foam
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 5 (Boston)</td>
+                    <td className="px-4 py-3 text-right font-mono">$1,200</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$150</td>
+                    <td className="px-4 py-3 text-right font-mono">~8 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$3,000</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Attic R-19 &rarr; R-60</div>
+                      <div className="text-xs text-text-muted">
+                        1,200 sq ft, spray foam (conditioned)
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 7 (Fargo)</td>
+                    <td className="px-4 py-3 text-right font-mono">$6,000</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$540</td>
+                    <td className="px-4 py-3 text-right font-mono">~11 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$10,800</td>
+                  </tr>
+                  <tr className="bg-surface-50">
+                    <td className="px-4 py-3">
+                      <div className="font-medium">Basement walls R-0 &rarr; R-15</div>
+                      <div className="text-xs text-text-muted">
+                        1,200 sq ft, XPS rigid foam DIY
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">Zone 5 (Pittsburgh)</td>
+                    <td className="px-4 py-3 text-right font-mono">$1,200</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$120</td>
+                    <td className="px-4 py-3 text-right font-mono">~10 yrs</td>
+                    <td className="px-4 py-3 text-right font-mono text-accent">$2,400</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-8 grid md:grid-cols-2 gap-4">
+              <div className="bg-accent-50 border-l-4 border-accent p-4 rounded-r-lg">
+                <p className="font-semibold text-accent-700 mb-2">
+                  Best ROI: attic, then air sealing
+                </p>
+                <p className="text-text text-sm">
+                  Across these scenarios, attic upgrades and rim-joist sealing have
+                  the shortest payback. Attics are the cheapest area to insulate per
+                  square foot and the largest single source of heat loss in most homes.
+                </p>
+              </div>
+              <div className="bg-secondary-50 border-l-4 border-secondary p-4 rounded-r-lg">
+                <p className="font-semibold text-secondary-700 mb-2">
+                  Tax credits cut payback ~30%
+                </p>
+                <p className="text-text text-sm">
+                  The Inflation Reduction Act 25C tax credit covers 30% of insulation
+                  costs (up to $1,200/year) through 2032. A $1,500 attic upgrade
+                  becomes a $1,050 effective cost &mdash; turning a 6-year payback
+                  into ~4 years.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Info Section */}
         <section className="py-12 bg-white border-t border-surface-200">
           <div className="container mx-auto px-4 max-w-4xl">

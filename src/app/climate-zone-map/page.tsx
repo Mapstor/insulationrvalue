@@ -2,6 +2,10 @@ import { Metadata } from 'next'
 import ClimateZoneMap from '@/components/calculators/ClimateZoneMap'
 import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import Link from 'next/link'
+import { getAllZones } from '@/lib/climate-zones'
+import { stateZones, majorCities } from '@/lib/climate-zone-reference'
+
+const allZones = getAllZones()
 
 export const metadata: Metadata = {
   title: 'IECC Climate Zone Map | Find Your Zone by ZIP Code',
@@ -239,6 +243,110 @@ export default function ClimateZoneMapPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Climate Zone by State (pre-rendered) */}
+        <section className="py-12 bg-surface-50 border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Climate Zones by US State
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Most US states span just one or two climate zones. The list below shows
+              the primary zone(s) for each state, grouped by zone number. Many states
+              (especially mountain west and California) have significant zone variation
+              by elevation&mdash;use the calculator above for a precise lookup by ZIP.
+            </p>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((zoneNum) => {
+                const zone = allZones.find((z) => z.zone.zone === zoneNum)
+                return (
+                  <div
+                    key={zoneNum}
+                    className="bg-white border border-surface-200 rounded-lg p-4"
+                  >
+                    <h3 className="font-semibold text-primary mb-1">
+                      Zone {zoneNum}
+                    </h3>
+                    <p className="text-xs text-text-muted mb-3">
+                      Attic {zone?.requirements.ceiling_attic} &middot; Wall{' '}
+                      {zone?.requirements.wood_frame_wall.replace(/ or .*/, '')}
+                    </p>
+                    <ul className="text-sm text-text-muted space-y-1">
+                      {stateZones[zoneNum]?.map((state) => (
+                        <li key={state}>{state}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Major Cities Reference (pre-rendered) */}
+        <section className="py-12 bg-white border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Climate Zones for Major US Cities
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Quick reference for 50+ major US cities and their IECC climate zones.
+              Use this if your city is listed; otherwise the ZIP lookup above is more
+              precise (zones can vary within a metro area).
+            </p>
+
+            <div className="border border-surface-200 rounded-lg overflow-hidden bg-white">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-primary text-white">
+                    <tr>
+                      <th className="px-4 py-2 text-left font-medium">City</th>
+                      <th className="px-4 py-2 text-left font-medium">State</th>
+                      <th className="px-4 py-2 text-center font-medium">Zone</th>
+                      <th className="px-4 py-2 text-left font-medium hidden md:table-cell">
+                        Climate Type
+                      </th>
+                      <th className="px-4 py-2 text-left font-medium hidden lg:table-cell">
+                        Required Attic R-Value
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-surface-200">
+                    {majorCities.map((c, idx) => {
+                      const zoneInfo = allZones.find((z) => z.zone.zone === c.zone)
+                      return (
+                        <tr
+                          key={`${c.city}-${c.state}`}
+                          className={idx % 2 === 0 ? 'bg-white' : 'bg-surface-50'}
+                        >
+                          <td className="px-4 py-2 font-medium">{c.city}</td>
+                          <td className="px-4 py-2 text-text-muted">{c.state}</td>
+                          <td className="px-4 py-2 text-center font-mono font-medium">
+                            {c.zone}
+                          </td>
+                          <td className="px-4 py-2 hidden md:table-cell text-text-muted capitalize">
+                            {zoneInfo?.zone.primaryConcern}
+                          </td>
+                          <td className="px-4 py-2 hidden lg:table-cell font-mono text-text-muted">
+                            {zoneInfo?.requirements.ceiling_attic}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-text-muted">
+              Cities near zone boundaries (Raleigh NC, Reno NV, Boise ID, parts of
+              Tennessee, NC, and Missouri) may fall into either of two zones depending
+              on exact location and elevation. Marine subzones (3C, 4C) apply to the
+              Pacific Northwest coast and Bay Area; they share R-value requirements
+              with their primary zone but have stricter vapor-control rules.
+            </p>
           </div>
         </section>
 

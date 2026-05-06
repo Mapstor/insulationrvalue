@@ -330,7 +330,7 @@ export default function RValueCalculator() {
                   </div>
                   <div>
                     <strong className="text-text">Code Basis:</strong>
-                    <p className="mt-1">2021 IECC Table R402.1.2 (residential), ASHRAE 90.1-2019 (commercial). Local amendments may supersede.</p>
+                    <p className="mt-1">2021 IECC Table R402.1.3 (residential), ASHRAE 90.1-2019 (commercial). Local amendments may supersede.</p>
                   </div>
                 </div>
               </details>

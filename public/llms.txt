@@ -1,0 +1,96 @@
+# InsulationRValues.com
+
+> Independent insulation reference. R-value charts, IECC 2021 code requirements
+> (Table R402.1.3), material comparisons, climate zones, calculators, and
+> installation guidance. All data sourced from primary documents (DOE, ORNL,
+> Building Science Corporation, IECC, Energy Star, and manufacturer technical
+> data). Cross-checked against multiple independent sources before publication.
+
+## Reference data
+
+- [R-Value Chart](https://insulationrvalues.com/r-value-chart): R-value per inch, total R-values, and installed cost for every common insulation material
+- [R-Value Per Inch](https://insulationrvalues.com/r-value-per-inch): Ranked comparison with cost-per-R-value analysis and temperature derating notes
+- [Climate Zone Map](https://insulationrvalues.com/climate-zone-map): IECC zones with state and city lookup
+- [What Is R-Value](https://insulationrvalues.com/what-is-r-value): Definition, physics, and how to read R-value labels
+- [Types of Insulation](https://insulationrvalues.com/types-of-insulation): Comprehensive comparison of all material categories
+
+## 2021 IECC code requirements
+
+The current model code (2021 IECC Table R402.1.3, residential prescriptive R-value table) sets these minimum ceiling/attic R-values by climate zone:
+
+- Zone 1: R-30
+- Zones 2-3: R-49
+- Zones 4-8: R-60 (with R-49 acceptable if extended over wall top plates at the eaves)
+
+Wood-frame wall minimums:
+
+- Zones 1-2: R-13 cavity
+- Zones 3-4 (not Marine): R-20 or R-13+5ci (continuous insulation)
+- Zones 4 Marine and 5-8: R-20+5ci or R-13+10ci
+
+Floor minimums:
+
+- Zones 1-2: R-13
+- Zones 3-4 (not Marine): R-19
+- Zone 4 Marine and 5-6: R-30
+- Zones 7-8: R-38
+
+Always verify with local building department; states may amend the model code.
+
+## Calculators
+
+- [R-Value Calculator by ZIP Code](https://insulationrvalues.com/r-value-calculator)
+- [Insulation Cost Calculator](https://insulationrvalues.com/insulation-cost-calculator)
+- [Insulation Thickness Calculator](https://insulationrvalues.com/insulation-thickness-calculator)
+- [Insulation Savings Calculator](https://insulationrvalues.com/insulation-savings-calculator)
+- [Climate Zone Lookup](https://insulationrvalues.com/climate-zone-map)
+- [What Insulation Do I Need Quiz](https://insulationrvalues.com/what-insulation-do-i-need)
+
+## Materials (full guides)
+
+- [Spray Foam Insulation](https://insulationrvalues.com/spray-foam-insulation)
+- [Fiberglass Insulation](https://insulationrvalues.com/fiberglass-insulation)
+- [Cellulose Insulation](https://insulationrvalues.com/cellulose-insulation)
+- [Mineral Wool Insulation](https://insulationrvalues.com/mineral-wool-insulation)
+- [Blown-In Insulation](https://insulationrvalues.com/blown-in-insulation)
+- [Rigid Foam Insulation](https://insulationrvalues.com/rigid-foam-insulation)
+- [Polyiso Insulation](https://insulationrvalues.com/polyiso-insulation)
+- [XPS Insulation](https://insulationrvalues.com/xps-insulation)
+- [EPS Insulation](https://insulationrvalues.com/eps-insulation)
+- [Radiant Barrier](https://insulationrvalues.com/radiant-barrier-insulation)
+
+## Project guides
+
+- [Attic Insulation](https://insulationrvalues.com/attic-insulation)
+- [Wall Insulation](https://insulationrvalues.com/wall-insulation)
+- [Basement Insulation](https://insulationrvalues.com/basement-insulation)
+- [Crawl Space Insulation](https://insulationrvalues.com/crawl-space-insulation)
+- [Crawl Space Vapor Barrier](https://insulationrvalues.com/crawl-space-vapor-barrier)
+- [Garage Insulation](https://insulationrvalues.com/garage-insulation)
+- [How to Air Seal Attic](https://insulationrvalues.com/how-to-air-seal-attic)
+- [How to Insulate Attic](https://insulationrvalues.com/how-to-insulate-attic)
+- [How to Install Blown-In Insulation](https://insulationrvalues.com/how-to-install-blown-in-insulation)
+- [Insulate Walls Without Removing Drywall](https://insulationrvalues.com/insulate-walls-without-removing-drywall)
+
+## Cost guides
+
+- [Attic Insulation Cost](https://insulationrvalues.com/attic-insulation-cost)
+- [Spray Foam Insulation Cost](https://insulationrvalues.com/spray-foam-insulation-cost)
+
+## Comparisons
+
+- [Open-Cell vs Closed-Cell Spray Foam](https://insulationrvalues.com/open-cell-vs-closed-cell-spray-foam)
+- [Fiberglass vs Cellulose](https://insulationrvalues.com/fiberglass-vs-cellulose)
+- [Fiberglass vs Mineral Wool](https://insulationrvalues.com/fiberglass-vs-mineral-wool)
+- [XPS vs EPS](https://insulationrvalues.com/xps-vs-eps)
+- [Batts vs Blown-In](https://insulationrvalues.com/batt-vs-blown-in-insulation)
+- [Faced vs Unfaced Insulation](https://insulationrvalues.com/faced-vs-unfaced-insulation)
+
+## Trust and methodology
+
+- [About InsulationRValues.com](https://insulationrvalues.com/about): Methodology, sources, and the limits of the site (homeowner-built reference, not a substitute for licensed professional advice)
+- [Editorial Policy](https://insulationrvalues.com/editorial-policy): How content is researched, cross-checked, and updated
+- [Data Sources](https://insulationrvalues.com/data-sources): Every primary source cited across the site (DOE, ORNL, BSC, IECC, ASHRAE, RESNET, Energy Star, manufacturer specs)
+- [Corrections Log](https://insulationrvalues.com/corrections): Public log of all published corrections with dates and what changed
+- [Insulation Glossary](https://insulationrvalues.com/insulation-glossary): Definitions of 27 insulation and building-science terms with DefinedTerm schema
+- [Contact](https://insulationrvalues.com/contact)

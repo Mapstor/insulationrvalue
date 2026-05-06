@@ -3,6 +3,9 @@ import Link from 'next/link'
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  // Footer is intentionally slim (4 cols x 5 links = 20 priority pages).
+  // PageRank concentrates here; deep material pages are reachable through
+  // contextual in-content links from these hub pages.
   const footerSections = {
     guides: {
       title: 'Guides',
@@ -12,23 +15,16 @@ export default function Footer() {
         { title: 'Basement Insulation', href: '/basement-insulation' },
         { title: 'Crawl Space Insulation', href: '/crawl-space-insulation' },
         { title: 'Garage Insulation', href: '/garage-insulation' },
-        { title: 'How to Air Seal Attic', href: '/how-to-air-seal-attic' },
-        { title: 'How to Insulate Attic', href: '/how-to-insulate-attic' },
       ],
     },
     materials: {
       title: 'Materials',
       links: [
-        { title: 'Spray Foam Insulation', href: '/spray-foam-insulation' },
-        { title: 'Fiberglass Insulation', href: '/fiberglass-insulation' },
+        { title: 'Spray Foam', href: '/spray-foam-insulation' },
+        { title: 'Fiberglass', href: '/fiberglass-insulation' },
+        { title: 'Cellulose', href: '/cellulose-insulation' },
         { title: 'Mineral Wool', href: '/mineral-wool-insulation' },
-        { title: 'Cellulose Insulation', href: '/cellulose-insulation' },
-        { title: 'Blown-In Insulation', href: '/blown-in-insulation' },
-        { title: 'Rigid Foam Insulation', href: '/rigid-foam-insulation' },
-        { title: 'Radiant Barrier', href: '/radiant-barrier-insulation' },
-        { title: 'Polyiso Insulation', href: '/polyiso-insulation' },
-        { title: 'XPS Insulation', href: '/xps-insulation' },
-        { title: 'EPS Insulation', href: '/eps-insulation' },
+        { title: 'Rigid Foam', href: '/rigid-foam-insulation' },
       ],
     },
     tools: {
@@ -38,36 +34,17 @@ export default function Footer() {
         { title: 'Cost Calculator', href: '/insulation-cost-calculator' },
         { title: 'Climate Zone Map', href: '/climate-zone-map' },
         { title: 'Thickness Calculator', href: '/insulation-thickness-calculator' },
-        { title: 'Savings Calculator', href: '/insulation-savings-calculator' },
         { title: 'Insulation Quiz', href: '/what-insulation-do-i-need' },
       ],
     },
-    comparisons: {
-      title: 'Comparisons',
-      links: [
-        { title: 'Open vs Closed Cell', href: '/open-cell-vs-closed-cell-spray-foam' },
-        { title: 'Fiberglass vs Cellulose', href: '/fiberglass-vs-cellulose' },
-        { title: 'Fiberglass vs Mineral Wool', href: '/fiberglass-vs-mineral-wool' },
-        { title: 'XPS vs EPS', href: '/xps-vs-eps' },
-        { title: 'Batts vs Blown-In', href: '/batt-vs-blown-in-insulation' },
-        { title: 'Faced vs Unfaced', href: '/faced-vs-unfaced-insulation' },
-      ],
-    },
-    costs: {
-      title: 'Costs & Savings',
-      links: [
-        { title: 'Spray Foam Cost', href: '/spray-foam-insulation-cost' },
-        { title: 'Attic Insulation Cost', href: '/attic-insulation-cost' },
-      ],
-    },
-    resources: {
-      title: 'Resources',
+    references: {
+      title: 'References',
       links: [
         { title: 'R-Value Chart', href: '/r-value-chart' },
         { title: 'R-Value Per Inch', href: '/r-value-per-inch' },
         { title: 'Types of Insulation', href: '/types-of-insulation' },
         { title: 'What Is R-Value?', href: '/what-is-r-value' },
-        { title: 'Crawl Space Vapor Barrier', href: '/crawl-space-vapor-barrier' },
+        { title: 'Open vs Closed Cell Foam', href: '/open-cell-vs-closed-cell-spray-foam' },
       ],
     },
   }
@@ -92,7 +69,7 @@ export default function Footer() {
         </div>
 
         {/* Link Sections */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           {Object.entries(footerSections).map(([key, section]) => (
             <div key={key}>
               <h3 className="font-semibold text-sm uppercase tracking-wide mb-4 text-white">

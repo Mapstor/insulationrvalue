@@ -6,9 +6,26 @@ import { Search, CheckCircle, RefreshCw, Users, Shield, FileText } from 'lucide-
 
 export const metadata: Metadata = {
   title: 'Editorial Policy | InsulationRValues.com',
-  description: 'Our editorial policy explains how we research, fact-check, and update content at InsulationRValues.com. Learn about our sources, review process, and affiliate disclosure.',
+  description:
+    'How content is researched, cross-checked, and updated at InsulationRValues.com. Sources, methodology, affiliate disclosure, and corrections policy.',
   alternates: {
     canonical: 'https://insulationrvalues.com/editorial-policy',
+  },
+  openGraph: {
+    title: 'Editorial Policy | InsulationRValues.com',
+    description:
+      'How content is researched, cross-checked, and updated at InsulationRValues.com. Sources, methodology, and corrections policy.',
+    url: 'https://insulationrvalues.com/editorial-policy',
+    siteName: 'InsulationRValues.com',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'InsulationRValues.com Editorial Policy',
+      },
+    ],
   },
 }
 
@@ -62,23 +79,25 @@ export default function EditorialPolicyPage() {
 
           <div className="bg-surface-50 border border-surface-200 rounded-lg p-5">
             <div className="flex items-center gap-3 mb-3">
-              <Users className="w-6 h-6 text-primary" />
-              <h3 className="font-semibold text-primary">2. Field Verification</h3>
+              <CheckCircle className="w-6 h-6 text-primary" />
+              <h3 className="font-semibold text-primary">2. Cross-Check</h3>
             </div>
             <p className="text-sm text-text-muted">
-              Our team includes practicing contractors and energy auditors who verify that
-              recommendations work in real-world conditions — not just laboratory settings.
+              Every R-value, cost range, and code reference is verified against at least two
+              independent primary sources before publishing. Where sources disagree, the
+              disagreement is noted in the article rather than papered over.
             </p>
           </div>
 
           <div className="bg-surface-50 border border-surface-200 rounded-lg p-5">
             <div className="flex items-center gap-3 mb-3">
-              <CheckCircle className="w-6 h-6 text-primary" />
-              <h3 className="font-semibold text-primary">3. Technical Review</h3>
+              <Users className="w-6 h-6 text-primary" />
+              <h3 className="font-semibold text-primary">3. Plain-Language Edit</h3>
             </div>
             <p className="text-sm text-text-muted">
-              Before publication, a certified building analyst or licensed contractor reviews
-              every article for technical accuracy and practical applicability.
+              Building science concepts are translated into language a homeowner can use,
+              without oversimplifying. Specific numbers and citations are kept; jargon is
+              removed or defined inline.
             </p>
           </div>
 

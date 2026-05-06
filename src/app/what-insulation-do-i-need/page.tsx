@@ -59,6 +59,271 @@ export default function InsulationQuizPage() {
           </div>
         </section>
 
+        {/* Recommendations by Project Location (pre-rendered for SEO + AI extraction) */}
+        <section className="py-12 bg-white border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Insulation Recommendations by Project Location
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              The quick answer for the five most common project locations, with
+              climate-zone variations noted. Use the quiz above for a personalized
+              recommendation that factors in your budget and DIY-vs-pro preference.
+            </p>
+
+            <div className="space-y-8">
+              <div className="border border-surface-200 rounded-lg p-6 bg-white">
+                <h3 className="text-xl font-semibold text-primary mb-3">
+                  Attic Insulation
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold text-text mb-2">Best material:</p>
+                    <p className="text-text-muted mb-3">
+                      <Link href="/cellulose-insulation" className="text-primary hover:underline">
+                        Blown-in cellulose
+                      </Link>{' '}
+                      ($0.60&ndash;$2.30/sq ft) for open accessible attics. Achieves
+                      R-49 in ~14&quot;, R-60 in ~17&quot; settled depth. Flows around
+                      wiring, plumbing, junction boxes better than batts. DIY-friendly
+                      with rented blower from Home Depot/Lowe&apos;s.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Targets:</p>
+                    <ul className="text-text-muted space-y-1">
+                      <li>Zone 1: R-30 minimum</li>
+                      <li>Zones 2&ndash;3: R-49 minimum</li>
+                      <li>Zones 4&ndash;8: R-60 minimum</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-text mb-2">When to consider spray foam:</p>
+                    <p className="text-text-muted mb-3">
+                      Conditioned attics (HVAC equipment in attic) where the roof deck
+                      is insulated instead of the floor. 2&times; the cost of blown-in
+                      but eliminates duct losses in unconditioned attic air.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Air seal first:</p>
+                    <p className="text-text-muted">
+                      Air sealing the attic floor before insulating saves an additional
+                      15&ndash;25% on energy bills per DOE field studies. Top plates,
+                      wire/pipe penetrations, recessed lights, attic hatch, duct boots.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                  Full guide:{' '}
+                  <Link href="/attic-insulation" className="text-primary hover:underline">
+                    Attic Insulation
+                  </Link>{' '}
+                  &middot;{' '}
+                  <Link href="/how-to-air-seal-attic" className="text-primary hover:underline">
+                    How to Air Seal an Attic
+                  </Link>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-6 bg-white">
+                <h3 className="text-xl font-semibold text-primary mb-3">
+                  Wall Insulation
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold text-text mb-2">New construction:</p>
+                    <p className="text-text-muted mb-3">
+                      <Link href="/fiberglass-insulation" className="text-primary hover:underline">
+                        Fiberglass batts
+                      </Link>{' '}
+                      sized to cavity (R-13 in 2&times;4, R-19 or R-21 HD in 2&times;6).
+                      In zones 4&ndash;8, add{' '}
+                      <Link href="/rigid-foam-insulation" className="text-primary hover:underline">
+                        continuous exterior rigid foam
+                      </Link>{' '}
+                      (R-5ci or R-10ci) to reduce thermal bridging.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Code targets:</p>
+                    <ul className="text-text-muted space-y-1">
+                      <li>Zones 1&ndash;2: R-13 cavity</li>
+                      <li>Zones 3&ndash;4: R-20 or R-13+5ci</li>
+                      <li>Zones 5&ndash;8: R-20+5ci or R-13+10ci</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-text mb-2">Retrofit (no demo):</p>
+                    <p className="text-text-muted mb-3">
+                      <Link href="/insulate-walls-without-removing-drywall" className="text-primary hover:underline">
+                        Dense-pack cellulose
+                      </Link>{' '}
+                      blown through small holes drilled in siding/drywall, packed to
+                      3&ndash;3.5 lb/ft&sup3;. Adds R-12&ndash;R-13 to a 2&times;4
+                      cavity plus significant air-sealing benefit. Pro-only job
+                      ($1.50&ndash;$3.00/sq ft).
+                    </p>
+                    <p className="font-semibold text-text mb-2">Avoid:</p>
+                    <p className="text-text-muted">
+                      DIY consumer blowers can&apos;t reach proper dense-pack density.
+                      Half-density installations settle within a year and leave the
+                      top 18&quot; of every wall empty.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                  Full guide:{' '}
+                  <Link href="/wall-insulation" className="text-primary hover:underline">
+                    Wall Insulation
+                  </Link>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-6 bg-white">
+                <h3 className="text-xl font-semibold text-primary mb-3">
+                  Basement Insulation
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold text-text mb-2">Best for moisture:</p>
+                    <p className="text-text-muted mb-3">
+                      <Link href="/xps-insulation" className="text-primary hover:underline">
+                        XPS rigid foam
+                      </Link>{' '}
+                      directly on the foundation wall (1.5&ndash;3&quot; for R-7.5 to
+                      R-15) is moisture-tolerant, frame a 2&times;4 wall over it for
+                      finishing. Or 2&ndash;3&quot; closed-cell{' '}
+                      <Link href="/spray-foam-insulation" className="text-primary hover:underline">
+                        spray foam
+                      </Link>{' '}
+                      for built-in vapor control.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Code targets:</p>
+                    <ul className="text-text-muted space-y-1">
+                      <li>Zones 1&ndash;2: Not Required</li>
+                      <li>Zone 3: R-5ci or R-13</li>
+                      <li>Zone 4: R-10ci or R-13</li>
+                      <li>Zones 5&ndash;8: R-15ci or R-19</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-text mb-2">Highest-ROI add-on:</p>
+                    <p className="text-text-muted mb-3">
+                      Rim joists. 2&quot; closed-cell spray foam ($800&ndash;$2,000 for
+                      a typical home) seals one of the largest air leakage points in
+                      the building envelope. Blower-door measurements show 0.5&ndash;1.0
+                      ACH50 reductions from rim joists alone.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Avoid:</p>
+                    <p className="text-text-muted">
+                      Fiberglass batts directly against concrete walls. They wick
+                      moisture, lose R-value, and grow mold. If you must use batts,
+                      they go in a framed wall over rigid foam, not against concrete.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                  Full guide:{' '}
+                  <Link href="/basement-insulation" className="text-primary hover:underline">
+                    Basement Insulation
+                  </Link>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-6 bg-white">
+                <h3 className="text-xl font-semibold text-primary mb-3">
+                  Crawl Space Insulation
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold text-text mb-2">Modern best practice:</p>
+                    <p className="text-text-muted mb-3">
+                      <strong>Encapsulate</strong>: seal vents, install heavy-duty
+                      vapor barrier on dirt floor, insulate walls with 2&quot;
+                      closed-cell{' '}
+                      <Link href="/spray-foam-insulation" className="text-primary hover:underline">
+                        spray foam
+                      </Link>{' '}
+                      or rigid foam. Crawl space becomes part of conditioned envelope.
+                      $3,000&ndash;$15,000 depending on size and access.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Traditional approach:</p>
+                    <p className="text-text-muted">
+                      Insulate floor above crawl space (R-19 to R-30 batts between
+                      joists, supported with insulation wires). Keep vents open. Less
+                      expensive but moisture issues are common.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-text mb-2">Avoid at all costs:</p>
+                    <p className="text-text-muted mb-3">
+                      Fiberglass batts in vented crawl space, unsupported. They sag
+                      within years, absorb moisture, grow mold. The most commonly
+                      documented insulation failure mode in residential energy audits.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Vapor barrier first:</p>
+                    <p className="text-text-muted">
+                      A 6+ mil polyethylene barrier on the dirt floor is non-negotiable.
+                      Soil moisture creates continuous vapor drive upward through the
+                      crawl space without it.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                  Full guide:{' '}
+                  <Link href="/crawl-space-insulation" className="text-primary hover:underline">
+                    Crawl Space Insulation
+                  </Link>{' '}
+                  &middot;{' '}
+                  <Link href="/crawl-space-vapor-barrier" className="text-primary hover:underline">
+                    Vapor Barrier Guide
+                  </Link>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-6 bg-white">
+                <h3 className="text-xl font-semibold text-primary mb-3">
+                  Garage Insulation
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold text-text mb-2">Attached garage walls:</p>
+                    <p className="text-text-muted mb-3">
+                      Walls between garage and conditioned space need fire-rated batts
+                      (mineral wool R-15 in 2&times;4, R-23 in 2&times;6) plus 5/8&quot;
+                      Type X drywall on the garage side. Detached unheated garages
+                      generally don&apos;t need wall insulation.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Floor over garage:</p>
+                    <p className="text-text-muted">
+                      Match the wall requirement for the climate (R-19 to R-30 batts
+                      between joists). Best practice: 2&quot; closed-cell spray foam
+                      on the underside (R-12&ndash;R-14) plus batts above for total
+                      R-30. Air-seals and prevents CO migration into living space.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-text mb-2">Garage doors:</p>
+                    <p className="text-text-muted mb-3">
+                      Most heat loss in attached garages is through the door, not the
+                      walls. A new insulated steel garage door (R-12 to R-18) costs
+                      $800&ndash;$2,500 and pays back faster than wall insulation in
+                      most cases.
+                    </p>
+                    <p className="font-semibold text-text mb-2">Heating decision:</p>
+                    <p className="text-text-muted">
+                      If you&apos;re NOT going to heat the garage, just insulate the
+                      shared wall and the floor above. Insulating the exterior walls
+                      of an unheated garage is wasted money.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-surface-200 text-xs text-text-muted">
+                  Full guide:{' '}
+                  <Link href="/garage-insulation" className="text-primary hover:underline">
+                    Garage Insulation
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Info Section */}
         <section className="py-12 bg-white border-t border-surface-200">
           <div className="container mx-auto px-4 max-w-4xl">

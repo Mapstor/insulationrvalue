@@ -153,7 +153,7 @@ export default function HomePage() {
                 </tr>
                 <tr className="bg-surface-50">
                   <td className="px-4 py-3 font-medium">Expanded Polystyrene (EPS)</td>
-                  <td className="px-4 py-3 text-center font-mono">R-3.6 – R-4.2</td>
+                  <td className="px-4 py-3 text-center font-mono">R-3.6 – R-4.4</td>
                   <td className="px-4 py-3">ICF walls, EIFS, cost-effective rigid foam</td>
                   <td className="px-4 py-3 text-center font-mono">$0.25–$0.50</td>
                   <td className="px-4 py-3 text-center">Yes</td>
@@ -238,78 +238,78 @@ export default function HomePage() {
                   <td className="px-4 py-3 text-center font-mono">R-30</td>
                   <td className="px-4 py-3 text-center font-mono">R-13</td>
                   <td className="px-4 py-3 text-center font-mono">R-13</td>
-                  <td className="px-4 py-3 text-center font-mono">R-0</td>
-                  <td className="px-4 py-3 text-center font-mono">R-0</td>
+                  <td className="px-4 py-3 text-center font-mono">NR</td>
+                  <td className="px-4 py-3 text-center font-mono">NR</td>
                 </tr>
                 <tr className="bg-surface-50">
                   <td className="px-4 py-3 font-medium">Zone 2</td>
-                  <td className="px-4 py-3 text-center font-mono">R-38</td>
+                  <td className="px-4 py-3 text-center font-mono">R-49</td>
                   <td className="px-4 py-3 text-center font-mono">R-13</td>
                   <td className="px-4 py-3 text-center font-mono">R-13</td>
-                  <td className="px-4 py-3 text-center font-mono">R-0</td>
-                  <td className="px-4 py-3 text-center font-mono">R-0</td>
+                  <td className="px-4 py-3 text-center font-mono">NR</td>
+                  <td className="px-4 py-3 text-center font-mono">NR</td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Zone 3</td>
-                  <td className="px-4 py-3 text-center font-mono">R-38</td>
+                  <td className="px-4 py-3 text-center font-mono">R-49</td>
                   <td className="px-4 py-3 text-center font-mono">R-20 or R-13+5ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-19</td>
-                  <td className="px-4 py-3 text-center font-mono">R-5ci</td>
-                  <td className="px-4 py-3 text-center font-mono">R-5ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-5ci or R-13</td>
+                  <td className="px-4 py-3 text-center font-mono">R-5ci or R-13</td>
                 </tr>
                 <tr className="bg-surface-50">
                   <td className="px-4 py-3 font-medium">Zone 4 (except Marine)</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
                   <td className="px-4 py-3 text-center font-mono">R-20 or R-13+5ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-19</td>
                   <td className="px-4 py-3 text-center font-mono">R-10ci or R-13</td>
-                  <td className="px-4 py-3 text-center font-mono">R-10ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-10ci or R-13</td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Zone 4 Marine</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
                   <td className="px-4 py-3 text-center font-mono">R-20+5ci or R-13+10ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-30</td>
                   <td className="px-4 py-3 text-center font-mono">R-10ci or R-13</td>
-                  <td className="px-4 py-3 text-center font-mono">R-10ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-10ci or R-13</td>
                 </tr>
                 <tr className="bg-surface-50">
                   <td className="px-4 py-3 font-medium">Zone 5</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
                   <td className="px-4 py-3 text-center font-mono">R-20+5ci or R-13+10ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-30</td>
                   <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
-                  <td className="px-4 py-3 text-center font-mono">R-15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Zone 6</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
                   <td className="px-4 py-3 text-center font-mono">R-20+5ci or R-13+10ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-30</td>
                   <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
-                  <td className="px-4 py-3 text-center font-mono">R-15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
                 </tr>
                 <tr className="bg-surface-50">
                   <td className="px-4 py-3 font-medium">Zone 7</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
-                  <td className="px-4 py-3 text-center font-mono">R-20+10ci or R-13+15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
+                  <td className="px-4 py-3 text-center font-mono">R-20+5ci or R-13+10ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-38</td>
                   <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
-                  <td className="px-4 py-3 text-center font-mono">R-15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Zone 8</td>
-                  <td className="px-4 py-3 text-center font-mono">R-49</td>
-                  <td className="px-4 py-3 text-center font-mono">R-20+10ci or R-13+15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-60</td>
+                  <td className="px-4 py-3 text-center font-mono">R-20+5ci or R-13+10ci</td>
                   <td className="px-4 py-3 text-center font-mono">R-38</td>
                   <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
-                  <td className="px-4 py-3 text-center font-mono">R-15ci</td>
+                  <td className="px-4 py-3 text-center font-mono">R-15ci or R-19</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-xs text-text-muted mt-3">
-            "ci" = continuous insulation (uninterrupted by framing). R-13+5ci means R-13 cavity insulation plus R-5 continuous exterior insulation. Local codes may differ—always verify with your building department.
+            "ci" = continuous insulation (uninterrupted by framing). R-13+5ci means R-13 cavity insulation plus R-5 continuous exterior insulation. "NR" = Not Required by code. Source: 2021 IECC Table R402.1.3 (residential prescriptive R-values), last verified May 2026. Local codes may differ&mdash;always verify with your building department.
           </p>
           <div className="mt-4 flex flex-wrap gap-4">
             <Link href="/r-value-calculator" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
@@ -444,7 +444,7 @@ export default function HomePage() {
               <div className="p-4 space-y-4">
                 <div>
                   <div className="font-medium">Zone 5 (4,500–5,400 HDD)</div>
-                  <p className="text-sm text-text-muted">Denver, Chicago, Boston, Salt Lake City. Cold winters, moderate summers. Attic R-49, wall R-20+5ci typical.</p>
+                  <p className="text-sm text-text-muted">Denver, Chicago, Boston, Salt Lake City. Cold winters, moderate summers. Attic R-60, wall R-20+5ci or R-13+10ci.</p>
                 </div>
                 <div>
                   <div className="font-medium">Zone 6 (5,400–7,200 HDD)</div>
@@ -452,7 +452,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-medium">Zone 7 (7,200–9,000 HDD)</div>
-                  <p className="text-sm text-text-muted">Duluth, northern New England, northern tier. Severe winters require R-49 attic, R-20+10ci walls, R-38 floors.</p>
+                  <p className="text-sm text-text-muted">Duluth, northern New England, northern tier. Severe winters require R-60 attic, R-20+5ci walls, R-38 floors.</p>
                 </div>
                 <div>
                   <div className="font-medium">Zone 8 (9,000+ HDD)</div>
@@ -470,15 +470,15 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-medium">Zone 2 (Hot-Humid/Hot-Dry)</div>
-                  <p className="text-sm text-text-muted">Houston, Phoenix, South Florida. R-38 attic, radiant barriers beneficial. Vapor barriers face exterior.</p>
+                  <p className="text-sm text-text-muted">Houston, Phoenix, South Florida. R-49 attic, radiant barriers beneficial. Vapor barriers face exterior.</p>
                 </div>
                 <div>
                   <div className="font-medium">Zone 3 (Warm)</div>
-                  <p className="text-sm text-text-muted">Atlanta, Dallas, Los Angeles. Mixed heating/cooling. R-38 attic, continuous insulation becoming common.</p>
+                  <p className="text-sm text-text-muted">Atlanta, Dallas, Los Angeles. Mixed heating/cooling. R-49 attic, continuous insulation common on walls.</p>
                 </div>
                 <div>
                   <div className="font-medium">Zone 4 (Mixed)</div>
-                  <p className="text-sm text-text-muted">Washington DC, Seattle, St. Louis. R-49 attic required. Marine (4C) subzone has stricter wall requirements.</p>
+                  <p className="text-sm text-text-muted">Washington DC, Seattle, St. Louis. R-60 attic required. Marine (4C) subzone has stricter wall requirements.</p>
                 </div>
               </div>
             </div>
@@ -498,7 +498,7 @@ export default function HomePage() {
         <section id="insulation-cost" className="mb-16 scroll-mt-24">
           <h2 className="text-2xl font-bold text-primary mb-4">Insulation Cost Guide</h2>
           <p className="text-text-muted mb-6">
-            Insulation costs vary by material, installation method (DIY vs. professional), and project scope. These are 2024-2025 national average costs including materials and labor where applicable.
+            Insulation costs vary by material, installation method (DIY vs. professional), and project scope. These are 2025-2026 national average costs including materials and labor where applicable.
           </p>
 
           <div className="overflow-x-auto border border-surface-200 rounded-lg">
@@ -719,7 +719,7 @@ export default function HomePage() {
             <div className="border-b border-surface-200 pb-6">
               <h3 className="font-semibold text-primary mb-2">What R-value do I need for my attic?</h3>
               <p className="text-text">
-                The minimum R-value for attics depends on your climate zone. Zones 1-2 require R-30 to R-38, Zone 3 requires R-38, and Zones 4-8 require R-49 per the 2021 IECC code. However, many experts recommend R-60 for cold climates (Zones 5-8) for optimal energy savings. Use our <Link href="/r-value-calculator" className="text-primary hover:underline">R-Value Calculator</Link> to find the specific requirement for your ZIP code.
+                The minimum R-value for attics depends on your climate zone. Zone 1 requires R-30, Zones 2-3 require R-49, and Zones 4-8 require R-60 per the 2021 IECC (Table R402.1.3). The IECC allows R-49 over 100% of the ceiling area to satisfy R-60 requirements <em>if</em> the full uncompressed R-49 extends over the wall top plates at the eaves. Use our <Link href="/r-value-calculator" className="text-primary hover:underline">R-Value Calculator</Link> to find the specific requirement for your ZIP code.
               </p>
             </div>
 

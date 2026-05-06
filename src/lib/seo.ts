@@ -22,7 +22,7 @@ export function generateArticleMetadata(
       type: 'article',
       publishedTime: frontmatter.datePublished,
       modifiedTime: frontmatter.dateModified,
-      authors: [frontmatter.author || 'InsulationRValues.com Editorial Team'],
+      authors: [frontmatter.author || 'Josh D.'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -49,8 +49,8 @@ export function generateArticleSchema(
     headline: frontmatter.title,
     description: frontmatter.metaDescription,
     author: {
-      '@type': 'Organization',
-      name: frontmatter.author || 'InsulationRValues.com Editorial Team',
+      '@type': 'Person',
+      name: frontmatter.author || 'Josh D.',
       url: `${siteUrl}/about`,
     },
     publisher: {
@@ -73,29 +73,47 @@ export function generateArticleSchema(
 }
 
 /**
- * Extract FAQ items from markdown content
+ * Extract FAQ items from markdown content.
+ *
+ * Looks for a "## FAQ" or "## FAQs" section, then extracts each "### Question"
+ * and its following answer. Uses split-based parsing rather than a single
+ * regex to avoid the `$` lookahead edge case (with multiline flag, `$` matches
+ * any end-of-line, which prematurely terminates capture groups).
  */
 export function extractFAQItems(
   content: string
 ): { question: string; answer: string }[] {
   const faqItems: { question: string; answer: string }[] = []
 
-  // Find FAQ section
-  const faqSectionMatch = content.match(/^## FAQ\n([\s\S]*?)(?=^## |$)/m)
-  if (!faqSectionMatch) return faqItems
+  // Locate the FAQ section header
+  const faqHeaderMatch = content.match(/^## FAQs?\s*$/m)
+  if (!faqHeaderMatch || faqHeaderMatch.index === undefined) return faqItems
 
-  const faqContent = faqSectionMatch[1]
+  // Take content after the header
+  const afterHeader = content.slice(
+    faqHeaderMatch.index + faqHeaderMatch[0].length
+  )
 
-  // Match h3 questions and their answers
-  const questionRegex = /^### (.+?)\n([\s\S]*?)(?=^### |^## |$)/gm
-  let match
+  // Stop at the next "## " section header (if any)
+  const nextSectionMatch = afterHeader.match(/^## /m)
+  const faqContent =
+    nextSectionMatch && nextSectionMatch.index !== undefined
+      ? afterHeader.slice(0, nextSectionMatch.index)
+      : afterHeader
 
-  while ((match = questionRegex.exec(faqContent)) !== null) {
-    const question = match[1].trim()
-    const answer = match[2]
+  // Split on "### " markers; each block is one Q&A pair
+  const questionBlocks = faqContent.split(/^### /m).slice(1) // skip preface before first ###
+
+  for (const block of questionBlocks) {
+    const firstNewline = block.indexOf('\n')
+    if (firstNewline === -1) continue
+
+    const question = block.slice(0, firstNewline).trim()
+    const answer = block
+      .slice(firstNewline + 1)
       .trim()
       .replace(/\n+/g, ' ')
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Remove links, keep text
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // strip markdown links, keep label text
       .trim()
 
     if (question && answer) {
@@ -164,6 +182,28 @@ export function generateOrganizationSchema(): object {
       email: 'info@insulationrvalues.com',
       contactType: 'customer service',
     },
+  }
+}
+
+/**
+ * Generate WebSite schema for the site root.
+ * Emitted on homepage (and About) so search engines have a clear site identity
+ * record alongside the Organization schema.
+ */
+export function generateWebSiteSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: siteUrl,
+    description:
+      'Independent insulation reference site. R-value charts, IECC code requirements, material comparisons, climate zones, calculators, and installation guidance sourced from primary documents (DOE, ORNL, BSC, IECC, manufacturer technical data).',
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      url: siteUrl,
+    },
+    inLanguage: 'en-US',
   }
 }
 

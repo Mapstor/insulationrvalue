@@ -147,7 +147,7 @@ export function getArticleBySlug(slug: string): Article | null {
       primaryKeyword: parsed.data.primaryKeyword,
       datePublished: new Date().toISOString().split('T')[0],
       dateModified: new Date().toISOString().split('T')[0],
-      author: 'InsulationRValues.com Editorial Team',
+      author: 'Josh D.',
     }
     content = parsed.content
   } else {
@@ -161,7 +161,7 @@ export function getArticleBySlug(slug: string): Article | null {
       primaryKeyword: data.primaryKeyword || data.primary_keyword,
       datePublished: data.datePublished || data.date_published || new Date().toISOString().split('T')[0],
       dateModified: data.dateModified || data.date_modified || new Date().toISOString().split('T')[0],
-      author: data.author || 'InsulationRValues.com Editorial Team',
+      author: data.author || 'Josh D.',
     }
     content = matterContent
   }

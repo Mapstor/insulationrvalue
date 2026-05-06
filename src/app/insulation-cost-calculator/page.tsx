@@ -59,6 +59,182 @@ export default function CostCalculatorPage() {
           </div>
         </section>
 
+        {/* Worked Cost Examples (pre-rendered for SEO) */}
+        <section className="py-12 bg-white border-t border-surface-200">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              Real-World Insulation Cost Examples
+            </h2>
+            <p className="text-text-muted mb-8 max-w-3xl">
+              Eight common project scenarios with realistic 2025&ndash;2026 pricing.
+              All numbers are national averages; expect &plusmn;15&ndash;25% variation
+              by region (Northeast and West Coast highest, Southeast lowest).
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  1,500 sq ft attic &mdash; R-49 blown cellulose
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Most common upgrade scenario. ~14&quot; depth at 3.5 R/inch.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">DIY:</span>{' '}
+                    <span className="font-mono font-medium">$900&ndash;$2,000</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Professional:</span>{' '}
+                    <span className="font-mono font-medium">$1,800&ndash;$3,500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  1,000 sq ft attic &mdash; R-60 blown cellulose
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Code minimum for zones 4&ndash;8. ~17&quot; settled depth.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">DIY:</span>{' '}
+                    <span className="font-mono font-medium">$1,000&ndash;$2,300</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Professional:</span>{' '}
+                    <span className="font-mono font-medium">$2,000&ndash;$4,000</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  800 sq ft attic &mdash; R-49 closed-cell spray foam
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Conditioned attic on roof deck. ~7.5&quot; depth.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">Professional only:</span>{' '}
+                    <span className="font-mono font-medium">$5,600&ndash;$11,000</span>
+                  </div>
+                  <div className="text-xs text-text-muted">
+                    Includes minimum job fee; rim joists separate.
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  2,500 sq ft new walls &mdash; R-13 fiberglass batts (2&times;4)
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Standard new-construction wall package, zones 1&ndash;3.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">DIY:</span>{' '}
+                    <span className="font-mono font-medium">$750&ndash;$2,000</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Professional:</span>{' '}
+                    <span className="font-mono font-medium">$1,250&ndash;$3,750</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  2,500 sq ft new walls &mdash; R-21 HD fiberglass (2&times;6)
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Zone 4+ baseline; pair with R-5ci continuous foam in zones 5+.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">DIY:</span>{' '}
+                    <span className="font-mono font-medium">$1,000&ndash;$3,000</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Professional:</span>{' '}
+                    <span className="font-mono font-medium">$1,500&ndash;$5,000</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  2,000 sq ft wall retrofit &mdash; dense-pack cellulose
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Drill-and-fill through siding/drywall, no demo. Pro-only job.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">Professional only:</span>{' '}
+                    <span className="font-mono font-medium">$3,000&ndash;$6,000</span>
+                  </div>
+                  <div className="text-xs text-text-muted">
+                    Adds R-12&ndash;R-13 in 2&times;4 walls.
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  1,200 sq ft basement walls &mdash; R-15 XPS rigid foam
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  3&quot; XPS direct to concrete. Zone 5+ requirement.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">DIY:</span>{' '}
+                    <span className="font-mono font-medium">$900&ndash;$1,500</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Professional:</span>{' '}
+                    <span className="font-mono font-medium">$2,400&ndash;$4,200</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-surface-200 rounded-lg p-5 bg-surface-50">
+                <h3 className="font-semibold text-primary mb-1">
+                  150 ln ft rim joists &mdash; closed-cell spray foam
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  Highest-ROI spray foam project. 2&quot; closed-cell.
+                </p>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="text-text-muted">Professional only:</span>{' '}
+                    <span className="font-mono font-medium">$800&ndash;$2,000</span>
+                  </div>
+                  <div className="text-xs text-text-muted">
+                    2&ndash;4 year payback from air sealing alone.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-secondary-50 border-l-4 border-secondary p-4 rounded-r-lg">
+              <p className="font-semibold text-secondary-700 mb-2">Regional cost variation</p>
+              <p className="text-text text-sm">
+                Northeast (NY, NJ, CT, MA): +15&ndash;25% above national average. West
+                Coast (CA, WA, OR): +10&ndash;20%. Southeast (FL, GA, TX, Carolinas):
+                at or slightly below national average. Rural areas everywhere:
+                +10&ndash;20% above local urban prices due to travel charges. Always
+                get at least three local quotes for jobs over $2,000.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Info Section */}
         <section className="py-12 bg-white border-t border-surface-200">
           <div className="container mx-auto px-4 max-w-4xl">

@@ -30,6 +30,7 @@ export default function ArticleLayout({ article, children }: ArticleLayoutProps)
           datePublished: frontmatter.datePublished,
           dateModified: frontmatter.dateModified,
           author: frontmatter.author,
+          content: article.content,
         }}
       />
 
