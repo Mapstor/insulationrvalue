@@ -132,6 +132,25 @@ export function getArticleBySlug(slug: string): Article | null {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
+  // Get file stats for default dateModified — using the actual file mtime
+  // so re-publishing only "modifies" articles that genuinely changed.
+  const fileStats = fs.statSync(fullPath)
+  const fileMtime = fileStats.mtime.toISOString().split('T')[0]
+
+  // Site launch date used as fallback datePublished when MDX has no explicit
+  // Date Published comment. Site went live in Feb 2026.
+  const SITE_LAUNCH_DATE = '2026-02-19'
+
+  // Allow MDX to override dates via HTML comments:
+  //   <!-- Date Published: 2026-02-19 -->
+  //   <!-- Date Modified: 2026-05-07 -->
+  const datePublishedMatch = fileContents.match(
+    /<!--\s*Date Published:\s*(\d{4}-\d{2}-\d{2})\s*-->/i
+  )
+  const dateModifiedMatch = fileContents.match(
+    /<!--\s*Date Modified:\s*(\d{4}-\d{2}-\d{2})\s*-->/i
+  )
+
   // Try parsing with gray-matter first (for YAML frontmatter)
   let frontmatter: ArticleFrontmatter
   let content: string
@@ -145,8 +164,8 @@ export function getArticleBySlug(slug: string): Article | null {
       metaDescription: parsed.data.metaDescription || '',
       slug,
       primaryKeyword: parsed.data.primaryKeyword,
-      datePublished: new Date().toISOString().split('T')[0],
-      dateModified: new Date().toISOString().split('T')[0],
+      datePublished: datePublishedMatch ? datePublishedMatch[1] : SITE_LAUNCH_DATE,
+      dateModified: dateModifiedMatch ? dateModifiedMatch[1] : fileMtime,
       author: 'Josh D.',
     }
     content = parsed.content

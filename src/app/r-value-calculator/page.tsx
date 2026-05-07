@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     'attic insulation r-value',
     'wall insulation requirements',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/r-value-calculator',
+  },
   openGraph: {
     title: 'R-Value Calculator by ZIP Code | InsulationRValues.com',
     description:

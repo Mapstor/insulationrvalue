@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'attic insulation savings',
     'home insulation investment',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/insulation-savings-calculator',
+  },
   openGraph: {
     title: 'Insulation Savings Calculator | InsulationRValues.com',
     description:

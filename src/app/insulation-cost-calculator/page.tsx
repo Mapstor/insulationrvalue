@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'fiberglass insulation cost',
     'cellulose insulation cost',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/insulation-cost-calculator',
+  },
   openGraph: {
     title: 'Insulation Cost Calculator | InsulationRValues.com',
     description:

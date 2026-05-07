@@ -65,7 +65,7 @@ export function generateArticleSchema(
       url: siteUrl,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/images/logo.png`,
+        url: `${siteUrl}/opengraph-image`,
       },
     },
     datePublished: frontmatter.datePublished,
@@ -180,7 +180,7 @@ export function generateOrganizationSchema(): object {
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,
-    logo: `${siteUrl}/images/logo.png`,
+    logo: `${siteUrl}/opengraph-image`,
     sameAs: [],
     description:
       'The most comprehensive, unbiased insulation R-value resource. Expert guides, calculators, and data-driven recommendations for every insulation project.',

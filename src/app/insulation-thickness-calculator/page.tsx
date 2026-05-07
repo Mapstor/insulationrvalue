@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'inches of insulation for R-value',
     'R-value thickness chart',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/insulation-thickness-calculator',
+  },
   openGraph: {
     title: 'Insulation Thickness Calculator | InsulationRValues.com',
     description:

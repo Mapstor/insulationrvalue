@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import { Search, CheckCircle, RefreshCw, Users, Shield, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Editorial Policy | InsulationRValues.com',
+  title: 'Editorial Policy',
   description:
     'How content is researched, cross-checked, and updated at InsulationRValues.com. Sources, methodology, affiliate disclosure, and corrections policy.',
   alternates: {

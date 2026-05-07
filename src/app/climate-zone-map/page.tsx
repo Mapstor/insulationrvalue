@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     'r-value by climate zone',
     'us climate zone map',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/climate-zone-map',
+  },
   openGraph: {
     title: 'IECC Climate Zone Map | InsulationRValues.com',
     description:

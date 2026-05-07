@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import { ExternalLink, FileText, Building2, FlaskConical, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Data Sources | InsulationRValues.com',
+  title: 'Data Sources',
   description:
     'Every primary source InsulationRValues.com cites: DOE, ORNL, Building Science Corporation, IECC, ASHRAE, Energy Star, RESNET, and manufacturer technical data sheets.',
   alternates: {

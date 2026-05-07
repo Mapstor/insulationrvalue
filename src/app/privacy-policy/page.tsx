@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import SchemaMarkup from '@/components/seo/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | InsulationRValues.com',
+  title: 'Privacy Policy',
   description:
     'Privacy policy for InsulationRValues.com. Learn how we collect, use, and protect your data, including information about cookies, analytics, and your rights under GDPR and CCPA.',
   alternates: {

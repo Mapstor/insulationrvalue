@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import { AlertTriangle, HardHat, FileWarning, MapPin, Calculator, ShieldAlert } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | InsulationRValues.com',
+  title: 'Disclaimer',
   description:
     'Important disclaimers for InsulationRValues.com. Our content is educational only and not a substitute for professional advice. Always consult local building codes and qualified contractors.',
   alternates: {

@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/seo/SchemaMarkup'
 import { Mail, MessageSquare, AlertCircle, CheckCircle, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | InsulationRValues.com',
+  title: 'Contact Us',
   description:
     'Get in touch with the InsulationRValues.com team. We welcome editorial corrections, partnership inquiries, and questions about our content.',
   alternates: {

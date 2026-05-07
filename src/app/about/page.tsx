@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import { Shield, Mail, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About InsulationRValues.com | A Homeowner-Built Insulation Resource',
+  title: 'About | A Homeowner-Built Insulation Resource',
   description:
     'How a homeowner who built a house in IECC Climate Zone 7 turned hundreds of hours of insulation research into one sourced reference. Methodology, sources, and limits.',
   alternates: {

@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'insulation buying guide',
     'home insulation calculator',
   ],
+  alternates: {
+    canonical: 'https://www.insulationrvalues.com/what-insulation-do-i-need',
+  },
   openGraph: {
     title: 'What Insulation Do I Need? | InsulationRValues.com',
     description:

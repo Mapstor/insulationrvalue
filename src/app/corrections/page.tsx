@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import { CheckCircle, Mail } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Corrections Log | InsulationRValues.com',
+  title: 'Corrections Log',
   description:
     'Public log of every published correction to InsulationRValues.com content. Material errors that affect homeowner decisions are listed here with dates and what changed.',
   alternates: {
