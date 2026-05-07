@@ -1,7 +1,43 @@
 # https://www.robotstxt.org/robotstxt.html
-User-agent: *
+# This file is a fallback; src/app/robots.ts is the dynamic source served at /robots.txt.
+
+# Explicit allows for AI crawlers we want to be cited by.
+User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Default for everything else
+User-agent: *
+Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/

@@ -36,7 +36,12 @@ export function generateArticleMetadata(
 }
 
 /**
- * Generate Article schema JSON-LD
+ * Generate Article schema JSON-LD.
+ *
+ * `image` is required by Google for Article rich-result eligibility. Each
+ * article has its own dynamic opengraph-image route at
+ * /{slug}/opengraph-image which generates a 1200x630 PNG at request time;
+ * we reference it here so Google has a valid image to fetch.
  */
 export function generateArticleSchema(
   frontmatter: ArticleFrontmatter,
@@ -48,6 +53,7 @@ export function generateArticleSchema(
     '@type': 'Article',
     headline: frontmatter.title,
     description: frontmatter.metaDescription,
+    image: [`${siteUrl}/${slug}/opengraph-image`],
     author: {
       '@type': 'Person',
       name: frontmatter.author || 'Josh D.',
@@ -64,6 +70,7 @@ export function generateArticleSchema(
     },
     datePublished: frontmatter.datePublished,
     dateModified: frontmatter.dateModified,
+    inLanguage: 'en-US',
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteUrl}/${slug}`,
@@ -232,7 +239,8 @@ export function generateWebApplicationSchema(
 }
 
 /**
- * Generate HowTo schema for how-to articles
+ * Generate HowTo schema for how-to articles. `image` is recommended for
+ * HowTo rich results; we reference the per-article opengraph-image route.
  */
 export function generateHowToSchema(
   title: string,
@@ -240,12 +248,17 @@ export function generateHowToSchema(
   steps: { name: string; text: string }[],
   url: string
 ): object {
+  const fullUrl = url.startsWith('http') ? url : `${siteUrl}${url}`
+  const path = url.startsWith('http') ? new URL(url).pathname : url
+  const slug = path.replace(/^\//, '').replace(/\/$/, '')
+
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: title,
     description,
-    url: url.startsWith('http') ? url : `${siteUrl}${url}`,
+    image: [`${siteUrl}/${slug}/opengraph-image`],
+    url: fullUrl,
     step: steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,
