@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'How a homeowner who built a house in IECC Climate Zone 7 turned hundreds of hours of insulation research into one sourced reference. Methodology, sources, and limits.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/about',
+    canonical: 'https://www.insulationrvalues.com/about',
   },
   openGraph: {
     title: 'About InsulationRValues.com',
     description:
       'Built by a homeowner who spent hundreds of hours researching insulation for his own North Dakota build. Now a sourced reference for everyone else.',
-    url: 'https://insulationrvalues.com/about',
+    url: 'https://www.insulationrvalues.com/about',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

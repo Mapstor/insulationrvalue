@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Insulation Savings Calculator | InsulationRValues.com',
     description:
       'Calculate your potential savings from upgrading insulation. Get payback period and long-term ROI estimates.',
-    url: 'https://insulationrvalues.com/insulation-savings-calculator',
+    url: 'https://www.insulationrvalues.com/insulation-savings-calculator',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ export default function SavingsCalculatorPage() {
           name: 'Insulation Savings Calculator',
           description:
             'Calculate potential energy savings from upgrading insulation. Estimates annual savings, payback period, and long-term ROI based on R-value improvement and climate zone.',
-          url: 'https://insulationrvalues.com/insulation-savings-calculator',
+          url: 'https://www.insulationrvalues.com/insulation-savings-calculator',
         }}
       />
 

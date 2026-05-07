@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Insulation Thickness Calculator | InsulationRValues.com',
     description:
       'Calculate how thick your insulation needs to be for any R-value. Compare all materials side by side.',
-    url: 'https://insulationrvalues.com/insulation-thickness-calculator',
+    url: 'https://www.insulationrvalues.com/insulation-thickness-calculator',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ export default function ThicknessCalculatorPage() {
           name: 'Insulation Thickness Calculator',
           description:
             'Calculate the required thickness of insulation to achieve your target R-value. Compare all insulation materials side by side.',
-          url: 'https://insulationrvalues.com/insulation-thickness-calculator',
+          url: 'https://www.insulationrvalues.com/insulation-thickness-calculator',
         }}
       />
 

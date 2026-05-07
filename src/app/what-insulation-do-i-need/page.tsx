@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'What Insulation Do I Need? | InsulationRValues.com',
     description:
       'Take our free quiz to find the best insulation for your home. Personalized recommendations in 2 minutes.',
-    url: 'https://insulationrvalues.com/what-insulation-do-i-need',
+    url: 'https://www.insulationrvalues.com/what-insulation-do-i-need',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ export default function InsulationQuizPage() {
           name: 'Insulation Quiz',
           description:
             'Interactive quiz to find the best insulation type for your home based on location, climate zone, budget, and project requirements.',
-          url: 'https://insulationrvalues.com/what-insulation-do-i-need',
+          url: 'https://www.insulationrvalues.com/what-insulation-do-i-need',
         }}
       />
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'R-Value Calculator by ZIP Code | InsulationRValues.com',
     description:
       'Find the recommended insulation R-values for your climate zone. Enter your ZIP code for IECC code requirements.',
-    url: 'https://insulationrvalues.com/r-value-calculator',
+    url: 'https://www.insulationrvalues.com/r-value-calculator',
     type: 'website',
   },
 }
@@ -38,7 +38,7 @@ export default function RValueCalculatorPage() {
           name: 'R-Value Calculator by ZIP Code',
           description:
             'Find the recommended insulation R-values for your climate zone based on your ZIP code. Shows IECC code minimum requirements and Energy Star recommendations.',
-          url: 'https://insulationrvalues.com/r-value-calculator',
+          url: 'https://www.insulationrvalues.com/r-value-calculator',
         }}
       />
 

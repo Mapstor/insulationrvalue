@@ -6,4 +6,4 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
-Sitemap: https://insulationrvalues.com/sitemap.xml
+Sitemap: https://www.insulationrvalues.com/sitemap.xml

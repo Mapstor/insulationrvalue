@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Insulation Cost Calculator | InsulationRValues.com',
     description:
       'Calculate insulation costs for your project. Compare prices for different materials and DIY vs professional installation.',
-    url: 'https://insulationrvalues.com/insulation-cost-calculator',
+    url: 'https://www.insulationrvalues.com/insulation-cost-calculator',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ export default function CostCalculatorPage() {
           name: 'Insulation Cost Calculator',
           description:
             'Calculate and compare insulation costs for different materials. Get estimates for DIY and professional installation.',
-          url: 'https://insulationrvalues.com/insulation-cost-calculator',
+          url: 'https://www.insulationrvalues.com/insulation-cost-calculator',
         }}
       />
 

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     'Terms of use for InsulationRValues.com. Read our terms and conditions governing your use of our website, including content usage, disclaimers, and limitations of liability.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/terms-of-use',
+    canonical: 'https://www.insulationrvalues.com/terms-of-use',
   },
   openGraph: {
     title: 'Terms of Use | InsulationRValues.com',
     description:
       'Terms governing use of InsulationRValues.com: content usage, disclaimers, and limitations of liability.',
-    url: 'https://insulationrvalues.com/terms-of-use',
+    url: 'https://www.insulationrvalues.com/terms-of-use',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

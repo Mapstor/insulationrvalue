@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getAllArticleSlugs } from '@/lib/mdx'
 
-const BASE_URL = 'https://insulationrvalues.com'
+const BASE_URL = 'https://www.insulationrvalues.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articleSlugs = getAllArticleSlugs()

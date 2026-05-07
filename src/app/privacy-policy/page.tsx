@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     'Privacy policy for InsulationRValues.com. Learn how we collect, use, and protect your data, including information about cookies, analytics, and your rights under GDPR and CCPA.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/privacy-policy',
+    canonical: 'https://www.insulationrvalues.com/privacy-policy',
   },
   openGraph: {
     title: 'Privacy Policy | InsulationRValues.com',
     description:
       'How InsulationRValues.com collects, uses, and protects your data. Cookies, analytics, GDPR, and CCPA rights.',
-    url: 'https://insulationrvalues.com/privacy-policy',
+    url: 'https://www.insulationrvalues.com/privacy-policy',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

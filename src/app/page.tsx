@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: 'Insulation R-Value Charts, Calculators & Expert Guides | InsulationRValues.com',
   description: 'The most comprehensive insulation R-value resource. R-value charts for all materials, IECC code requirements by climate zone, cost data, and expert installation guides.',
   alternates: {
-    canonical: 'https://insulationrvalues.com',
+    canonical: 'https://www.insulationrvalues.com',
   },
   openGraph: {
     title: 'Insulation R-Value Charts, Calculators & Expert Guides',
     description: 'Complete R-value charts, IECC requirements, material comparisons, and calculators for every insulation project.',
-    url: 'https://insulationrvalues.com',
+    url: 'https://www.insulationrvalues.com',
     siteName: 'InsulationRValues.com',
     type: 'website',
   },

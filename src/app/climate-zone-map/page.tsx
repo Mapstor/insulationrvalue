@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'IECC Climate Zone Map | InsulationRValues.com',
     description:
       'Interactive map to find your IECC climate zone. Get R-value requirements for insulation based on your location.',
-    url: 'https://insulationrvalues.com/climate-zone-map',
+    url: 'https://www.insulationrvalues.com/climate-zone-map',
     type: 'website',
   },
 }
@@ -38,7 +38,7 @@ export default function ClimateZoneMapPage() {
           name: 'IECC Climate Zone Map',
           description:
             'Interactive US climate zone map with ZIP code lookup. Find your IECC climate zone and see required R-values for insulation.',
-          url: 'https://insulationrvalues.com/climate-zone-map',
+          url: 'https://www.insulationrvalues.com/climate-zone-map',
         }}
       />
 

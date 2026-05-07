@@ -95,7 +95,7 @@ export default function ArticleLayout({ article, children }: ArticleLayoutProps)
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(frontmatter.title)}&url=${encodeURIComponent(`https://insulationrvalues.com/${article.slug}`)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(frontmatter.title)}&url=${encodeURIComponent(`https://www.insulationrvalues.com/${article.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
@@ -103,7 +103,7 @@ export default function ArticleLayout({ article, children }: ArticleLayoutProps)
                     Share on X
                   </a>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://insulationrvalues.com/${article.slug}`)}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://www.insulationrvalues.com/${article.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"

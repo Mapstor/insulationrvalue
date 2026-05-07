@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: '%s | InsulationRValues.com',
   },
   description: 'The most comprehensive insulation R-value resource. R-value charts, calculators, climate zone requirements, and expert guides for every insulation type.',
-  metadataBase: new URL('https://insulationrvalues.com'),
+  metadataBase: new URL('https://www.insulationrvalues.com'),
   verification: {
     google: 'google12f8c2f9c03913a3',
     other: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://insulationrvalues.com',
+    url: 'https://www.insulationrvalues.com',
     siteName: 'InsulationRValues.com',
     title: 'Insulation R-Values | Complete R-Value Guide & Calculator',
     description: 'The most comprehensive insulation R-value resource. R-value charts, calculators, climate zone requirements, and expert guides for every insulation type.',

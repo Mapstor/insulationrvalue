@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'How content is researched, cross-checked, and updated at InsulationRValues.com. Sources, methodology, affiliate disclosure, and corrections policy.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/editorial-policy',
+    canonical: 'https://www.insulationrvalues.com/editorial-policy',
   },
   openGraph: {
     title: 'Editorial Policy | InsulationRValues.com',
     description:
       'How content is researched, cross-checked, and updated at InsulationRValues.com. Sources, methodology, and corrections policy.',
-    url: 'https://insulationrvalues.com/editorial-policy',
+    url: 'https://www.insulationrvalues.com/editorial-policy',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

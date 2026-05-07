@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     'Plain-English definitions of insulation and building science terms: R-value, U-value, perm rating, ACH50, RESNET grade, thermal bridging, ci, vapor barrier, and 20+ more.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/insulation-glossary',
+    canonical: 'https://www.insulationrvalues.com/insulation-glossary',
   },
   openGraph: {
     title: 'Insulation Glossary | Building Science Terms Defined',
     description:
       'Definitions of 25+ insulation and building science terms used across the site, with cross-links to detailed guides.',
-    url: 'https://insulationrvalues.com/insulation-glossary',
+    url: 'https://www.insulationrvalues.com/insulation-glossary',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [
@@ -247,13 +247,13 @@ export default function InsulationGlossaryPage() {
     name: 'Insulation and Building Science Glossary',
     description:
       'Definitions of 27 insulation and building-science terms referenced across InsulationRValues.com.',
-    url: 'https://insulationrvalues.com/insulation-glossary',
+    url: 'https://www.insulationrvalues.com/insulation-glossary',
     hasDefinedTerm: terms.map((t) => ({
       '@type': 'DefinedTerm',
       name: t.name,
       description: t.description,
-      url: `https://insulationrvalues.com/insulation-glossary#${t.id}`,
-      inDefinedTermSet: 'https://insulationrvalues.com/insulation-glossary',
+      url: `https://www.insulationrvalues.com/insulation-glossary#${t.id}`,
+      inDefinedTermSet: 'https://www.insulationrvalues.com/insulation-glossary',
     })),
   }
 

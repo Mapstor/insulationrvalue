@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { ArticleFrontmatter, TableOfContentsItem } from './mdx'
 
-const siteUrl = 'https://insulationrvalues.com'
+const siteUrl = 'https://www.insulationrvalues.com'
 const siteName = 'InsulationRValues.com'
 
 /**

@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://insulationrvalues.com/sitemap.xml',
+    sitemap: 'https://www.insulationrvalues.com/sitemap.xml',
   }
 }

@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'Every primary source InsulationRValues.com cites: DOE, ORNL, Building Science Corporation, IECC, ASHRAE, Energy Star, RESNET, and manufacturer technical data sheets.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/data-sources',
+    canonical: 'https://www.insulationrvalues.com/data-sources',
   },
   openGraph: {
     title: 'Data Sources | InsulationRValues.com',
     description:
       'Primary sources cited across the site: DOE, ORNL, BSC, IECC, ASHRAE, Energy Star, RESNET, manufacturer specs.',
-    url: 'https://insulationrvalues.com/data-sources',
+    url: 'https://www.insulationrvalues.com/data-sources',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

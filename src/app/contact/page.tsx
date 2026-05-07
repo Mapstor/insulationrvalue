@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'Get in touch with the InsulationRValues.com team. We welcome editorial corrections, partnership inquiries, and questions about our content.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/contact',
+    canonical: 'https://www.insulationrvalues.com/contact',
   },
   openGraph: {
     title: 'Contact InsulationRValues.com',
     description:
       'Reach the InsulationRValues.com team for corrections, partnership inquiries, or questions about content.',
-    url: 'https://insulationrvalues.com/contact',
+    url: 'https://www.insulationrvalues.com/contact',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

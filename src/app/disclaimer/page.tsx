@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'Important disclaimers for InsulationRValues.com. Our content is educational only and not a substitute for professional advice. Always consult local building codes and qualified contractors.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/disclaimer',
+    canonical: 'https://www.insulationrvalues.com/disclaimer',
   },
   openGraph: {
     title: 'Disclaimer | InsulationRValues.com',
     description:
       'Educational content only — not a substitute for professional advice. Always consult local building codes and qualified contractors.',
-    url: 'https://insulationrvalues.com/disclaimer',
+    url: 'https://www.insulationrvalues.com/disclaimer',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [

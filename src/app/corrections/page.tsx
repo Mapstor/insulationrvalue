@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'Public log of every published correction to InsulationRValues.com content. Material errors that affect homeowner decisions are listed here with dates and what changed.',
   alternates: {
-    canonical: 'https://insulationrvalues.com/corrections',
+    canonical: 'https://www.insulationrvalues.com/corrections',
   },
   openGraph: {
     title: 'Corrections Log | InsulationRValues.com',
     description:
       'Public log of corrections to InsulationRValues.com content. Material errors are documented here with dates.',
-    url: 'https://insulationrvalues.com/corrections',
+    url: 'https://www.insulationrvalues.com/corrections',
     siteName: 'InsulationRValues.com',
     type: 'website',
     images: [
